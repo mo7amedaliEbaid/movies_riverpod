@@ -3,7 +3,7 @@ import 'package:movies_riverpod/app/app_colors.dart';
 import 'package:movies_riverpod/app/app_text_styles.dart';
 import 'package:movies_riverpod/app/app_text_theme.dart';
 
-interface class AppTheme {
+sealed class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
         brightness: Brightness.light,

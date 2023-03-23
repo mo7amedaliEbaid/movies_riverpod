@@ -1,3 +1,4 @@
+/*
 import 'dart:async';
 import 'dart:typed_data';
 import 'dart:ui';
@@ -43,6 +44,7 @@ class _FindCinemasState extends State<FindCinemas> {
           GoogleMap(
             initialCameraPosition: _kGooglePlex,
             markers: _markers,
+
             myLocationButtonEnabled: false,
             onMapCreated: (GoogleMapController controller) {
               _controller = controller;
@@ -128,3 +130,4 @@ class _FindCinemasState extends State<FindCinemas> {
     return await bitmapIcon.future;
   }
 }
+*/

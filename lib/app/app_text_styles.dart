@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-interface class AppTextStyles {
+sealed class AppTextStyles {
   //Merri Weather Font Family
   static const String merriWeatherFontFamily = 'MerriWeather';
 

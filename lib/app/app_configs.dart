@@ -1,4 +1,4 @@
-interface class AppConfigs {
+sealed class AppConfigs {
 
   static String preMovieBackdrop(String path) =>
       'https://image.tmdb.org/t/p/w780$path';

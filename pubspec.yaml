@@ -57,7 +57,7 @@ dependencies:
   isar_flutter_libs:
   get_it:
   injectable_generator:
-  google_maps_flutter:
+#  google_maps_flutter:
 
 dev_dependencies:
   flutter_test:
@@ -91,7 +91,6 @@ flutter:
     - assets/images/movies/
     - assets/images/icons/
     - assets/images/cinemas/
-    - assets/images/avatars/
     - assets/images/markers/
 
 

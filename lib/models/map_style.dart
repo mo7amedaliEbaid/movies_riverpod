@@ -1,3 +1,4 @@
+/*
 class MapStyle {
   final String aubergine = """
     [
@@ -964,3 +965,4 @@ class MapStyle {
       }
     ]""";
 }
+*/

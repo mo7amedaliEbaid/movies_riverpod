@@ -3,7 +3,7 @@ import 'package:movies_riverpod/app/app_text_styles.dart';
 
 import 'app_colors.dart';
 
-interface class AppTextTheme {
+sealed class AppTextTheme {
   //Simple text theme
   static TextTheme get lightTextTheme {
     return  TextTheme(

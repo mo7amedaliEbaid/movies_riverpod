@@ -170,7 +170,7 @@ class MovieDetailBody extends StatelessWidget {
                 height: 120.sp,
                 child: GestureDetector(
                   onTap: () {
-                    context.pushNamed(Routes.map.name);
+                 //   context.pushNamed(Routes.map.name);
                   },
                   child: Center(
                     child: Row(

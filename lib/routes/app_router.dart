@@ -35,13 +35,13 @@ GoRouter goRouter(GoRouterRef ref) {
           name: Routes.movieDetail.name,
           builder: (context, state) => MovieDetailScreen(
               key: state.pageKey, movieId: state.extra as int)),
-      GoRoute(
+     /* GoRoute(
         path: '/map',
         name: Routes.map.name,
         builder: (context, state) => FindCinemas(
           key: state.pageKey,
         ),
-      ),
+      ),*/
     ],
   );
 }
