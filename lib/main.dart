@@ -14,17 +14,11 @@ Future<void> runMain() async {
   provideDataSources();
   provideRepositories();
   provideUseCases();
-  // Setting Device Orientation
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
 
-  //status bar color
-  // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
-  //   statusBarColor: AppColors.white,
-  //   statusBarBrightness: Brightness.light,
-  // ));
 
   runApp(ProviderScope(
     observers: [
