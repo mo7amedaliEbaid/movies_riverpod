@@ -5,7 +5,6 @@ part 'movie.freezed.dart';
 
 part 'movie.g.dart';
 
-
 @freezed
 @Embedded(ignore: {'copyWith'})
 class Movie with _$Movie {

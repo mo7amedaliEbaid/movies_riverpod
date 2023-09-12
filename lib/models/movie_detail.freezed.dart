@@ -21,48 +21,69 @@ MovieDetail _$MovieDetailFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MovieDetail {
   int get isarId => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'id')
   int get id => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'vote_count')
   int get voteCount => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'runtime')
   int get runtime => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'revenue')
   int get revenue => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'vote_average')
   double get voteAverage => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'popularity')
   double get popularity => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'adult')
   bool get adult => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'video')
   bool get video => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'backdrop_path')
   String get backdropPath => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'status')
   String get status => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'tagline')
   String get tagline => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'title')
   String get title => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'release_date')
   String get releaseDate => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'poster_path')
   String get posterPath => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'imdb_id')
   String get imdbId => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'original_language')
   String get originalLanguage => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'homepage')
   String get homepage => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'original_title')
   String get originalTitle => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'overview')
   String get overview => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'genres')
   List<Genre> get genres => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $MovieDetailCopyWith<MovieDetail> get copyWith =>
       throw _privateConstructorUsedError;
@@ -73,6 +94,7 @@ abstract class $MovieDetailCopyWith<$Res> {
   factory $MovieDetailCopyWith(
           MovieDetail value, $Res Function(MovieDetail) then) =
       _$MovieDetailCopyWithImpl<$Res, MovieDetail>;
+
   @useResult
   $Res call(
       {int isarId,
@@ -105,6 +127,7 @@ class _$MovieDetailCopyWithImpl<$Res, $Val extends MovieDetail>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -228,6 +251,7 @@ abstract class _$$_MovieDetailCopyWith<$Res>
   factory _$$_MovieDetailCopyWith(
           _$_MovieDetail value, $Res Function(_$_MovieDetail) then) =
       __$$_MovieDetailCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -469,6 +493,7 @@ class _$_MovieDetail extends _MovieDetail {
   @JsonKey(name: 'overview')
   final String overview;
   final List<Genre> _genres;
+
   @override
   @JsonKey(name: 'genres')
   List<Genre> get genres {
@@ -584,6 +609,7 @@ abstract class _MovieDetail extends MovieDetail {
       @JsonKey(name: 'original_title') final String originalTitle,
       @JsonKey(name: 'overview') final String overview,
       @JsonKey(name: 'genres') final List<Genre> genres}) = _$_MovieDetail;
+
   const _MovieDetail._() : super._();
 
   factory _MovieDetail.fromJson(Map<String, dynamic> json) =
@@ -591,66 +617,87 @@ abstract class _MovieDetail extends MovieDetail {
 
   @override
   int get isarId;
+
   @override
   @JsonKey(name: 'id')
   int get id;
+
   @override
   @JsonKey(name: 'vote_count')
   int get voteCount;
+
   @override
   @JsonKey(name: 'runtime')
   int get runtime;
+
   @override
   @JsonKey(name: 'revenue')
   int get revenue;
+
   @override
   @JsonKey(name: 'vote_average')
   double get voteAverage;
+
   @override
   @JsonKey(name: 'popularity')
   double get popularity;
+
   @override
   @JsonKey(name: 'adult')
   bool get adult;
+
   @override
   @JsonKey(name: 'video')
   bool get video;
+
   @override
   @JsonKey(name: 'backdrop_path')
   String get backdropPath;
+
   @override
   @JsonKey(name: 'status')
   String get status;
+
   @override
   @JsonKey(name: 'tagline')
   String get tagline;
+
   @override
   @JsonKey(name: 'title')
   String get title;
+
   @override
   @JsonKey(name: 'release_date')
   String get releaseDate;
+
   @override
   @JsonKey(name: 'poster_path')
   String get posterPath;
+
   @override
   @JsonKey(name: 'imdb_id')
   String get imdbId;
+
   @override
   @JsonKey(name: 'original_language')
   String get originalLanguage;
+
   @override
   @JsonKey(name: 'homepage')
   String get homepage;
+
   @override
   @JsonKey(name: 'original_title')
   String get originalTitle;
+
   @override
   @JsonKey(name: 'overview')
   String get overview;
+
   @override
   @JsonKey(name: 'genres')
   List<Genre> get genres;
+
   @override
   @JsonKey(ignore: true)
   _$$_MovieDetailCopyWith<_$_MovieDetail> get copyWith =>

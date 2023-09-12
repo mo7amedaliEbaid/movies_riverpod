@@ -39,5 +39,5 @@ class MovieDetail with _$MovieDetail {
       _$MovieDetailFromJson(json);
 
   @override
-  Id get isarId ;
+  Id get isarId;
 }

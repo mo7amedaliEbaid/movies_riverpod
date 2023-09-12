@@ -19,7 +19,6 @@ Future<void> runMain() async {
     DeviceOrientation.portraitDown,
   ]);
 
-
   runApp(ProviderScope(
     observers: [
       Observers(),

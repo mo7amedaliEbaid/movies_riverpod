@@ -69,10 +69,9 @@ void provideDataSources() {
   injector.registerFactory<BookmarkLocalDataSource>(
       () => BookmarkLocalDataSourceImpl(localDb: injector.get<LocalDb>()));
 
-
   //Notification
   injector.registerFactory<NotificationsLocalDataSource>(
-          () => NotificationsLocalDataSourceImpl(localDb: injector.get<LocalDb>()));
+      () => NotificationsLocalDataSourceImpl(localDb: injector.get<LocalDb>()));
 }
 
 void provideRepositories() {
@@ -92,36 +91,48 @@ void provideRepositories() {
   injector.registerFactory<BookmarkRepository>(() => BookmarkRepositoryImpl(
       bookmarkLocalDataSource: injector.get<BookmarkLocalDataSource>()));
 
-
   //Notification
-  injector.registerFactory<NotificationRepository>(() => NotificationRepositoryImpl(
-      notificationsLocalDataSource: injector.get<NotificationsLocalDataSource>()));
+  injector.registerFactory<NotificationRepository>(() =>
+      NotificationRepositoryImpl(
+          notificationsLocalDataSource:
+              injector.get<NotificationsLocalDataSource>()));
 }
 
 void provideUseCases() {
   //home
-  injector.registerFactory<FetchAndCacheGenreUseCase>(() => FetchAndCacheGenreUseCase(homeRepository: injector.get<HomeRepository>()));
-  injector.registerFactory<FetchAndCacheMoviesUseCase>(() => FetchAndCacheMoviesUseCase(homeRepository: injector.get<HomeRepository>()));
-  injector.registerFactory<FetchCacheGenresUseCase>(() => FetchCacheGenresUseCase(homeRepository: injector.get<HomeRepository>()));
-  injector.registerFactory<FetchCachedMoviesUseCase>(() => FetchCachedMoviesUseCase(homeRepository: injector.get<HomeRepository>()));
-
+  injector.registerFactory<FetchAndCacheGenreUseCase>(() =>
+      FetchAndCacheGenreUseCase(
+          homeRepository: injector.get<HomeRepository>()));
+  injector.registerFactory<FetchAndCacheMoviesUseCase>(() =>
+      FetchAndCacheMoviesUseCase(
+          homeRepository: injector.get<HomeRepository>()));
+  injector.registerFactory<FetchCacheGenresUseCase>(() =>
+      FetchCacheGenresUseCase(homeRepository: injector.get<HomeRepository>()));
+  injector.registerFactory<FetchCachedMoviesUseCase>(() =>
+      FetchCachedMoviesUseCase(homeRepository: injector.get<HomeRepository>()));
 
   //MovieDetail
-  injector.registerFactory<AddBookmarkUseCase>(() => AddBookmarkUseCase(movieDetailRepository: injector.get<MovieDetailRepository>()));
-  injector.registerFactory<GetCastsUseCase>(() => GetCastsUseCase(movieDetailRepository: injector.get<MovieDetailRepository>()));
-  injector.registerFactory<GetMovieDetailsUseCase>(() => GetMovieDetailsUseCase(movieDetailRepository: injector.get<MovieDetailRepository>()));
-  injector.registerFactory<IsBookmarkedUseCase>(() => IsBookmarkedUseCase(movieDetailRepository: injector.get<MovieDetailRepository>()));
-  injector.registerFactory<RemoveBookmarkUseCase>(() => RemoveBookmarkUseCase(movieDetailRepository: injector.get<MovieDetailRepository>()));
+  injector.registerFactory<AddBookmarkUseCase>(() => AddBookmarkUseCase(
+      movieDetailRepository: injector.get<MovieDetailRepository>()));
+  injector.registerFactory<GetCastsUseCase>(() => GetCastsUseCase(
+      movieDetailRepository: injector.get<MovieDetailRepository>()));
+  injector.registerFactory<GetMovieDetailsUseCase>(() => GetMovieDetailsUseCase(
+      movieDetailRepository: injector.get<MovieDetailRepository>()));
+  injector.registerFactory<IsBookmarkedUseCase>(() => IsBookmarkedUseCase(
+      movieDetailRepository: injector.get<MovieDetailRepository>()));
+  injector.registerFactory<RemoveBookmarkUseCase>(() => RemoveBookmarkUseCase(
+      movieDetailRepository: injector.get<MovieDetailRepository>()));
 
   //Bookmarks
-  injector.registerFactory<GetBookmarksUseCase>(() => GetBookmarksUseCase(bookmarkRepository: injector.get<BookmarkRepository>()));
+  injector.registerFactory<GetBookmarksUseCase>(() => GetBookmarksUseCase(
+      bookmarkRepository: injector.get<BookmarkRepository>()));
   // injector.registerFactory<RemoveBookmarkUseCase>(() => RemoveBookmarkUseCase(bookmarkRepository: injector.get<BookmarkRepository>()));
 
-
   //Notifications
-  injector.registerFactory<GetAllNotificationsUseCase>(() => GetAllNotificationsUseCase(notificationRepository: injector.get<NotificationRepository>()));
-  injector.registerFactory<ClearAllNotificationsUseCase>(() => ClearAllNotificationsUseCase(notificationRepository: injector.get<NotificationRepository>()));
-
-
+  injector.registerFactory<GetAllNotificationsUseCase>(() =>
+      GetAllNotificationsUseCase(
+          notificationRepository: injector.get<NotificationRepository>()));
+  injector.registerFactory<ClearAllNotificationsUseCase>(() =>
+      ClearAllNotificationsUseCase(
+          notificationRepository: injector.get<NotificationRepository>()));
 }
-

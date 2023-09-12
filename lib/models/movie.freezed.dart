@@ -22,34 +22,48 @@ Movie _$MovieFromJson(Map<String, dynamic> json) {
 mixin _$Movie {
   @JsonKey(name: 'adult')
   bool get adult => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'backdrop_path')
   String get backdropPath => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'genre_ids')
   List<int> get genreIds => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'id')
   int get id => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'original_language')
   String get originalLanguage => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'original_title')
   String get originalTitle => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'overview')
   String get overview => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'popularity')
   double get popularity => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'poster_path')
   String get posterPath => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'release_date')
   String get releaseDate => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'title')
   String get title => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'video')
   bool get video => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'vote_average')
   double get voteAverage => throw _privateConstructorUsedError;
+
   @JsonKey(name: 'vote_count')
   int get voteCount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $MovieCopyWith<Movie> get copyWith => throw _privateConstructorUsedError;
 }
@@ -58,6 +72,7 @@ mixin _$Movie {
 abstract class $MovieCopyWith<$Res> {
   factory $MovieCopyWith(Movie value, $Res Function(Movie) then) =
       _$MovieCopyWithImpl<$Res, Movie>;
+
   @useResult
   $Res call(
       {@JsonKey(name: 'adult') bool adult,
@@ -83,6 +98,7 @@ class _$MovieCopyWithImpl<$Res, $Val extends Movie>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -169,6 +185,7 @@ class _$MovieCopyWithImpl<$Res, $Val extends Movie>
 abstract class _$$_MovieCopyWith<$Res> implements $MovieCopyWith<$Res> {
   factory _$$_MovieCopyWith(_$_Movie value, $Res Function(_$_Movie) then) =
       __$$_MovieCopyWithImpl<$Res>;
+
   @override
   @useResult
   $Res call(
@@ -304,6 +321,7 @@ class _$_Movie implements _Movie {
   @JsonKey(name: 'backdrop_path')
   final String backdropPath;
   final List<int> _genreIds;
+
   @override
   @JsonKey(name: 'genre_ids')
   List<int> get genreIds {
@@ -436,45 +454,59 @@ abstract class _Movie implements Movie {
   @override
   @JsonKey(name: 'adult')
   bool get adult;
+
   @override
   @JsonKey(name: 'backdrop_path')
   String get backdropPath;
+
   @override
   @JsonKey(name: 'genre_ids')
   List<int> get genreIds;
+
   @override
   @JsonKey(name: 'id')
   int get id;
+
   @override
   @JsonKey(name: 'original_language')
   String get originalLanguage;
+
   @override
   @JsonKey(name: 'original_title')
   String get originalTitle;
+
   @override
   @JsonKey(name: 'overview')
   String get overview;
+
   @override
   @JsonKey(name: 'popularity')
   double get popularity;
+
   @override
   @JsonKey(name: 'poster_path')
   String get posterPath;
+
   @override
   @JsonKey(name: 'release_date')
   String get releaseDate;
+
   @override
   @JsonKey(name: 'title')
   String get title;
+
   @override
   @JsonKey(name: 'video')
   bool get video;
+
   @override
   @JsonKey(name: 'vote_average')
   double get voteAverage;
+
   @override
   @JsonKey(name: 'vote_count')
   int get voteCount;
+
   @override
   @JsonKey(ignore: true)
   _$$_MovieCopyWith<_$_Movie> get copyWith =>
