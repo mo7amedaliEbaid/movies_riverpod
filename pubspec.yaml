@@ -38,9 +38,7 @@ dependencies:
   flutter_riverpod:
   riverpod_generator:
   riverpod_annotation:
-
   dio:
-
   flutter_svg:
   freezed_annotation:
   freezed:
@@ -54,8 +52,6 @@ dependencies:
   cached_network_image:
   shared_preferences:
   event_bus_plus:
-  firebase_core:
-  firebase_remote_config:
   isar:
   path_provider:
   isar_flutter_libs:
@@ -79,6 +75,8 @@ dev_dependencies:
 
 
 
+
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -95,6 +93,7 @@ flutter:
   assets:
     - assets/images/movies/
     - assets/images/icons/
+    - assets/
 
 
 
