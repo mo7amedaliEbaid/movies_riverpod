@@ -8,7 +8,7 @@ enum MovieDetailConcreteState {
   failure,
 }
 
-class MovieDetailState extends Equatable {
+interface class MovieDetailState extends Equatable {
   final int id;
   final MovieDetail movieDetail;
   final bool isBookmarked;

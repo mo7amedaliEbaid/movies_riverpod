@@ -8,7 +8,7 @@ import 'package:movies_riverpod/shared/util/app_exception.dart';
 
 import '../../../../movie_detail/domain/use_cases/remove_bookmark_use_case.dart';
 
-class BookmarkNotifier extends StateNotifier<BookmarkState> {
+interface class BookmarkNotifier extends StateNotifier<BookmarkState> {
   final GetBookmarksUseCase _getBookmarkUseCase =
       injector.get<GetBookmarksUseCase>();
   final RemoveBookmarkUseCase _removeBookmarkUseCase =

@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_riverpod/app/app_colors.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/models/movie_detail.dart';
 
 class MovieDetailHeader extends StatelessWidget {
@@ -14,14 +14,14 @@ class MovieDetailHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      expandedHeight: AppDimens.movieDetailBackdropHeight,
+      expandedHeight: AppDimensions.movieDetailBackdropHeight,
       leading: GestureDetector(
         onTap: () {
           Navigator.pop(context);
         },
         child: const Icon(
           Icons.arrow_back_ios,
-          color: AppColors.primaryLight,
+          color: Colors.white,
         ),
       ),
       actions: [

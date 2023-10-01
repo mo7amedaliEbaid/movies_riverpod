@@ -3,7 +3,7 @@ import 'package:dartz/dartz.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
 
-class Response {
+interface class Response {
   final int statusCode;
   final String? statusMessage;
   final dynamic data;

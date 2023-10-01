@@ -8,7 +8,7 @@ part 'movies.g.dart';
 
 @freezed
 @Collection(ignore: {'copyWith'})
-class Movies with _$Movies {
+interface class Movies with _$Movies {
   const Movies._();
   @JsonSerializable(explicitToJson: true)
   const factory Movies({

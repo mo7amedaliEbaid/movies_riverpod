@@ -9,7 +9,7 @@ import 'package:movies_riverpod/features/movie_detail/presentation/provider/stat
 import 'package:movies_riverpod/models/movie_detail.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class MovieDetailNotifier extends StateNotifier<MovieDetailState> {
+interface class MovieDetailNotifier extends StateNotifier<MovieDetailState> {
   final AddBookmarkUseCase _addBookmarkUseCase =
       injector.get<AddBookmarkUseCase>();
   final RemoveBookmarkUseCase _removeBookmarkUseCase =

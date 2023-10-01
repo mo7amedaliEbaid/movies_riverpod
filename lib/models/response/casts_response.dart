@@ -1,4 +1,4 @@
-class CastsResponse<T> {
+interface class CastsResponse<T> {
   final List<T> casts;
 
   CastsResponse(this.casts);

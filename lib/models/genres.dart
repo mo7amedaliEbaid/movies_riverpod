@@ -8,7 +8,7 @@ part 'genres.g.dart';
 
 @freezed
 @Collection(ignore: {'copyWith'})
-class Genres with _$Genres {
+interface class Genres with _$Genres {
   const Genres._();
 
   const factory Genres({

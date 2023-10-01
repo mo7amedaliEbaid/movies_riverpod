@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/features/notifications/presentation/provider/notification_provider.dart';
 import 'package:movies_riverpod/features/notifications/presentation/widget/notification_item.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
@@ -56,7 +56,7 @@ void notificationBottomSheet(BuildContext context) {
 
                             },
                               child: Padding(
-                                padding: EdgeInsets.only(top: AppDimens.p10, right: AppDimens.p12,bottom: AppDimens.p12, left: AppDimens.p12),
+                                padding: EdgeInsets.only(top: AppDimensions.p10, right: AppDimensions.p12,bottom: AppDimensions.p12, left: AppDimensions.p12),
                                 child:  Text('Clear All',style: context.textTheme.bodySmall),
                               )),
                         )

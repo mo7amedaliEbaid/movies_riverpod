@@ -4,7 +4,7 @@ import 'package:movies_riverpod/models/genre.dart';
 
 enum GenreConcreteState { initial, loading, loaded, failure }
 
-class GenreState extends Equatable {
+interface class GenreState extends Equatable {
   final List<Genre> genres;
   final bool hasData;
   final String message;

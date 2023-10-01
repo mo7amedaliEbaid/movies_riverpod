@@ -3,7 +3,7 @@ import 'package:movies_riverpod/models/movie_detail.dart';
 
 enum BookmarkConcreteState { initial, loading, loaded, failure }
 
-class BookmarkState extends Equatable {
+interface class BookmarkState extends Equatable {
   final List<MovieDetail> bookmarks;
   final bool hasData;
   final String message;

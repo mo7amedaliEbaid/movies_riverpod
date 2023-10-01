@@ -4,7 +4,7 @@ final messageQueueProvider = StateNotifierProvider<MessageQueue, List<String>>((
   return MessageQueue();
 });
 
-class MessageQueue extends StateNotifier<List<String>> {
+interface class MessageQueue extends StateNotifier<List<String>> {
   MessageQueue() : super([]);
 
   void addMessage(String message) {

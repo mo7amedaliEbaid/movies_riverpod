@@ -4,10 +4,10 @@ import 'package:movies_riverpod/features/notifications/data/models/notification.
 import 'package:movies_riverpod/features/notifications/domain/repository/notifications_repository.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class NotificationRepositoryImpl extends NotificationRepository {
+interface class NotificationRepoImpl extends NotificationRepository {
   NotificationsLocalDataSource notificationsLocalDataSource;
 
-  NotificationRepositoryImpl({required this.notificationsLocalDataSource});
+  NotificationRepoImpl({required this.notificationsLocalDataSource});
 
   @override
   Future<void> clearNotifications() {

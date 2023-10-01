@@ -4,7 +4,7 @@ part 'notification.freezed.dart';
 part 'notification.g.dart';
 @freezed
 @Collection(ignore: {'copyWith'})
-class NotificationModel with _$NotificationModel{
+interface class NotificationModel with _$NotificationModel{
   const factory NotificationModel({
     @Default(Isar.autoIncrement) int id,
     @Default('') String title,

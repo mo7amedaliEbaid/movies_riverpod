@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/features/bookmarks/presentation/providers/bookmark_notifier_provider.dart';
 import 'package:movies_riverpod/models/movie_detail.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
@@ -20,15 +20,15 @@ class BookmarkCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
-          top: AppDimens.p8, right: AppDimens.p16, left: AppDimens.p16),
+          top: AppDimensions.p8, right: AppDimensions.p16, left: AppDimensions.p16),
       child: Row(
         children: [
           Card(
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(AppDimens.p8)),
+                borderRadius: BorderRadius.circular(AppDimensions.p8)),
             elevation: 8.sp,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(AppDimens.p8),
+              borderRadius: BorderRadius.circular(AppDimensions.p8),
               child: CachedNetworkImage(
                 imageUrl: AppConfigs.preMoviePoster(movieDetail.posterPath),
                 errorWidget: (context, url, error) =>
@@ -36,8 +36,8 @@ class BookmarkCard extends StatelessWidget {
                 placeholder: (context, url) => const Center(
                   child: CircularProgressIndicator(),
                 ),
-                height: AppDimens.nowShowingPosterHeight,
-                width: AppDimens.nowShowingPosterWidth,
+                height: AppDimensions.nowShowingPosterHeight,
+                width: AppDimensions.nowShowingPosterWidth,
                 fit: BoxFit.cover,
               ),
             ),
@@ -45,9 +45,9 @@ class BookmarkCard extends StatelessWidget {
           Expanded(
             child: Container(
               padding: EdgeInsets.only(
-                  top: AppDimens.p10,
-                  left: AppDimens.p8,
-                  right: AppDimens.p8),
+                  top: AppDimensions.p10,
+                  left: AppDimensions.p8,
+                  right: AppDimensions.p8),
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,11 +80,11 @@ class BookmarkCard extends StatelessWidget {
                     style: context.textTheme.titleMedium,
                   ),
                   SizedBox(
-                    height: AppDimens.p14,
+                    height: AppDimensions.p14,
                   ),
                   RatingBar(rating: movieDetail.voteAverage),
                   SizedBox(
-                    height: AppDimens.p8,
+                    height: AppDimensions.p8,
                   ),
                   Text(
                     movieDetail.overview,

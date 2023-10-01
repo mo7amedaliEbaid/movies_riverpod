@@ -47,7 +47,7 @@ abstract class $CastCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CastCopyWithImpl<$Res, $Val extends Cast>
+interface class _$CastCopyWithImpl<$Res, $Val extends Cast>
     implements $CastCopyWith<$Res> {
   _$CastCopyWithImpl(this._value, this._then);
 

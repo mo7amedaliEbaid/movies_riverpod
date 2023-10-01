@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:movies_riverpod/shared/local/shared_prefs/shared_pref.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SharedPrefImplementation implements SharedPref {
+interface class SharedPrefImplementation implements SharedPref {
   SharedPreferences? sharedPreferences;
   final Completer<SharedPreferences> initCompleter = Completer<SharedPreferences>();
   SharedPrefImplementation(){

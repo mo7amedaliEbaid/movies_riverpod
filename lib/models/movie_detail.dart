@@ -8,7 +8,7 @@ part 'movie_detail.g.dart';
 
 @freezed
 @Collection(ignore: {'copyWith'})
-class MovieDetail with _$MovieDetail {
+interface class MovieDetail with _$MovieDetail {
   const MovieDetail._();
 
   @JsonSerializable(explicitToJson: true)

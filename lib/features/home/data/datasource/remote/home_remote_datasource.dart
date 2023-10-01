@@ -7,7 +7,7 @@ import 'package:movies_riverpod/shared/network/network_service.dart';
 import 'package:movies_riverpod/shared/network/network_values.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
+interface class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   final NetworkService networkService;
 
   HomeRemoteDataSourceImpl({required this.networkService});
@@ -16,7 +16,7 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   Future<Either<AppException, MoviesResponse>> getMovies(
       {required String endPoint, required int page}) async {
     final response = await networkService.get(endPoint, queryParams: {
-      Params.page: page,
+      Parameters.page: page,
     });
 
     return response.fold((l) => Left(l), (r) {

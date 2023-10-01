@@ -77,13 +77,13 @@ void provideDataSources() {
 
 void provideRepositories() {
   //home
-  injector.registerFactory<HomeRepository>(() => HomeRepositoryImpl(
+  injector.registerFactory<HomeRepository>(() => HomeRepoImpl(
       homeRemoteDataSource: injector.get<HomeRemoteDataSource>(),
       homeLocalDataSource: injector.get<HomeLocalDataSource>()));
 
   //MovieDetail
   injector.registerFactory<MovieDetailRepository>(() =>
-      MovieDetailRepositoryImpl(
+      MovieDetailRepoImpl(
           movieDetailDataSource: injector.get<MovieDetailRemoteDataSource>(),
           movieDetailLocalDataSource:
               injector.get<MovieDetailLocalDataSource>()));
@@ -94,7 +94,7 @@ void provideRepositories() {
 
   //Notification
   injector.registerFactory<NotificationRepository>(() =>
-      NotificationRepositoryImpl(
+      NotificationRepoImpl(
           notificationsLocalDataSource:
               injector.get<NotificationsLocalDataSource>()));
 }
@@ -127,7 +127,6 @@ void provideUseCases() {
   //Bookmarks
   injector.registerFactory<GetBookmarksUseCase>(() => GetBookmarksUseCase(
       bookmarkRepository: injector.get<BookmarkRepository>()));
-  // injector.registerFactory<RemoveBookmarkUseCase>(() => RemoveBookmarkUseCase(bookmarkRepository: injector.get<BookmarkRepository>()));
 
   //Notifications
   injector.registerFactory<GetAllNotificationsUseCase>(() =>

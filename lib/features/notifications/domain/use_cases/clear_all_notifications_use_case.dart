@@ -1,6 +1,6 @@
 import 'package:movies_riverpod/features/notifications/domain/repository/notifications_repository.dart';
 
-class ClearAllNotificationsUseCase {
+interface class ClearAllNotificationsUseCase {
   final NotificationRepository notificationRepository;
 
   ClearAllNotificationsUseCase({required this.notificationRepository});

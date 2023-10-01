@@ -121,7 +121,7 @@ abstract class $MovieDetailCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MovieDetailCopyWithImpl<$Res, $Val extends MovieDetail>
+interface class _$MovieDetailCopyWithImpl<$Res, $Val extends MovieDetail>
     implements $MovieDetailCopyWith<$Res> {
   _$MovieDetailCopyWithImpl(this._value, this._then);
 
@@ -279,7 +279,7 @@ abstract class _$$_MovieDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MovieDetailCopyWithImpl<$Res>
+interface class __$$_MovieDetailCopyWithImpl<$Res>
     extends _$MovieDetailCopyWithImpl<$Res, _$_MovieDetail>
     implements _$$_MovieDetailCopyWith<$Res> {
   __$$_MovieDetailCopyWithImpl(
@@ -403,7 +403,7 @@ class __$$_MovieDetailCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_MovieDetail extends _MovieDetail {
+interface class _$_MovieDetail extends _MovieDetail {
   const _$_MovieDetail(
       {this.isarId = Isar.autoIncrement,
       @JsonKey(name: 'id') this.id = 0,

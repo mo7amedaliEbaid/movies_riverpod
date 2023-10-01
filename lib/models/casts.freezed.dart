@@ -33,7 +33,7 @@ abstract class $CastsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CastsCopyWithImpl<$Res, $Val extends Casts>
+interface class _$CastsCopyWithImpl<$Res, $Val extends Casts>
     implements $CastsCopyWith<$Res> {
   _$CastsCopyWithImpl(this._value, this._then);
 
@@ -76,7 +76,7 @@ abstract class _$$_CastsCopyWith<$Res> implements $CastsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CastsCopyWithImpl<$Res> extends _$CastsCopyWithImpl<$Res, _$_Casts>
+interface class __$$_CastsCopyWithImpl<$Res> extends _$CastsCopyWithImpl<$Res, _$_Casts>
     implements _$$_CastsCopyWith<$Res> {
   __$$_CastsCopyWithImpl(_$_Casts _value, $Res Function(_$_Casts) _then)
       : super(_value, _then);
@@ -107,7 +107,7 @@ class __$$_CastsCopyWithImpl<$Res> extends _$CastsCopyWithImpl<$Res, _$_Casts>
 
 /// @nodoc
 
-class _$_Casts extends _Casts {
+interface class _$_Casts extends _Casts {
   const _$_Casts(
       {this.isarId = Isar.autoIncrement,
       this.id = 0,

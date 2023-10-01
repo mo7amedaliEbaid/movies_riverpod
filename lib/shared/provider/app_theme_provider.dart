@@ -11,7 +11,7 @@ final appThemeProvider =
   return AppThemeChangeNotifier(sharedPref);
 });
 
-class AppThemeChangeNotifier extends StateNotifier<ThemeState> {
+interface class AppThemeChangeNotifier extends StateNotifier<ThemeState> {
   final SharedPref sharedPref;
 
   ThemeMode currentTheme = ThemeMode.light;

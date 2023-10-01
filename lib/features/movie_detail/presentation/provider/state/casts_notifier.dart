@@ -7,7 +7,7 @@ import 'package:movies_riverpod/models/cast.dart';
 import 'package:movies_riverpod/models/response/casts_response.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class CastsNotifier extends StateNotifier<CastsState> {
+interface class CastsNotifier extends StateNotifier<CastsState> {
 
   final GetCastsUseCase _getCastsUseCase = injector.get<GetCastsUseCase>();
 

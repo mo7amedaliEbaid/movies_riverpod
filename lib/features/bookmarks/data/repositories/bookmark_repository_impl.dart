@@ -4,7 +4,7 @@ import 'package:movies_riverpod/features/bookmarks/domain/repositories/bookmark_
 import 'package:movies_riverpod/models/movie_detail.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class BookmarkRepositoryImpl extends BookmarkRepository {
+interface class BookmarkRepositoryImpl extends BookmarkRepository {
   BookmarkLocalDataSource bookmarkLocalDataSource;
 
   BookmarkRepositoryImpl({required this.bookmarkLocalDataSource});

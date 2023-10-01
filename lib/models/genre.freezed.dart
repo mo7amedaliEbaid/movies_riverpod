@@ -39,7 +39,7 @@ abstract class $GenreCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GenreCopyWithImpl<$Res, $Val extends Genre>
+interface class _$GenreCopyWithImpl<$Res, $Val extends Genre>
     implements $GenreCopyWith<$Res> {
   _$GenreCopyWithImpl(this._value, this._then);
 
@@ -77,7 +77,7 @@ abstract class _$$_GenreCopyWith<$Res> implements $GenreCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GenreCopyWithImpl<$Res> extends _$GenreCopyWithImpl<$Res, _$_Genre>
+interface class __$$_GenreCopyWithImpl<$Res> extends _$GenreCopyWithImpl<$Res, _$_Genre>
     implements _$$_GenreCopyWith<$Res> {
   __$$_GenreCopyWithImpl(_$_Genre _value, $Res Function(_$_Genre) _then)
       : super(_value, _then);
@@ -103,7 +103,7 @@ class __$$_GenreCopyWithImpl<$Res> extends _$GenreCopyWithImpl<$Res, _$_Genre>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Genre implements _Genre {
+interface class _$_Genre implements _Genre {
   const _$_Genre(
       {@JsonKey(name: 'id') this.id = 0,
       @JsonKey(name: 'name') this.name = ''});

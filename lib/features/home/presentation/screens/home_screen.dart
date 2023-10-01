@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/app/app_strings.dart';
 import 'package:movies_riverpod/features/home/presentation/providers/home_state_notifier_provider.dart';
 import 'package:movies_riverpod/features/home/presentation/widgets/now_showing_movies.dart';
@@ -60,7 +60,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: AppDimens.p18, right: AppDimens.p18, top: AppDimens.p8),
+                  left: AppDimensions.p18, right: AppDimensions.p18, top: AppDimensions.p8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -77,7 +77,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ),
             Padding(
               padding:
-                  EdgeInsets.only(left: AppDimens.p18, right: AppDimens.p18),
+                  EdgeInsets.only(left: AppDimensions.p18, right: AppDimensions.p18),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

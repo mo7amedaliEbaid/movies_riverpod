@@ -7,7 +7,7 @@ import 'package:isar/isar.dart';
 import 'package:movies_riverpod/shared/local/cache/local_db.dart';
 import 'home_local_datasource.dart';
 
-class HomeLocalDataSourceImpl extends HomeLocalDataSource {
+interface class HomeLocalDataSourceImpl extends HomeLocalDataSource {
   LocalDb localDb;
 
   HomeLocalDataSourceImpl({required this.localDb});

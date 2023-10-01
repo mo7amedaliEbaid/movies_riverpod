@@ -36,7 +36,7 @@ abstract class $NotificationModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NotificationModelCopyWithImpl<$Res, $Val extends NotificationModel>
+interface class _$NotificationModelCopyWithImpl<$Res, $Val extends NotificationModel>
     implements $NotificationModelCopyWith<$Res> {
   _$NotificationModelCopyWithImpl(this._value, this._then);
 
@@ -86,7 +86,7 @@ abstract class _$$_NotificationModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NotificationModelCopyWithImpl<$Res>
+interface class __$$_NotificationModelCopyWithImpl<$Res>
     extends _$NotificationModelCopyWithImpl<$Res, _$_NotificationModel>
     implements _$$_NotificationModelCopyWith<$Res> {
   __$$_NotificationModelCopyWithImpl(
@@ -124,7 +124,7 @@ class __$$_NotificationModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_NotificationModel implements _NotificationModel {
+interface  class _$_NotificationModel implements _NotificationModel {
   const _$_NotificationModel(
       {this.id = Isar.autoIncrement,
       this.title = '',

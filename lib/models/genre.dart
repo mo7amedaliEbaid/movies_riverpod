@@ -7,7 +7,7 @@ part 'genre.g.dart';
 
 @freezed
 @Embedded(ignore: {'copyWith'})
-class Genre with _$Genre {
+interface class Genre with _$Genre {
   const factory Genre(
       {@JsonKey(name: 'id') @Default(0) int id,
       @JsonKey(name: 'name') @Default('') String name}) = _Genre;

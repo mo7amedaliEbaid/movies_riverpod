@@ -1,4 +1,4 @@
-class AppConstants {
+interface class AppConstants {
   static const String NOW_SHOWING = 'now_showing';
   static const String POPULAR = 'popular';
   static const String LENGTH = 'Length';

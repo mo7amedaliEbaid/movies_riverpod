@@ -1,4 +1,4 @@
-class AppConfigs {
+interface class AppConfigs {
   // static const String baseUrl = 'https://api.themoviedb.org/3/';
 
   static String preMovieBackdrop(String path) =>

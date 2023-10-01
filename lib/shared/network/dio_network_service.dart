@@ -9,7 +9,7 @@ import '../util/app_exception.dart';
 import 'exception/mixin/network_handler_mixin.dart';
 import 'network_values.dart';
 
-class DioNetworkService extends NetworkService with ExceptionHandlerMixin {
+interface class DioNetworkService extends NetworkService with ExceptionHandlerMixin {
   late Dio dio;
 
   DioNetworkService() {
@@ -53,7 +53,7 @@ class DioNetworkService extends NetworkService with ExceptionHandlerMixin {
   @override
   Future<Either<AppException, response.Response>> get(String endPoint, {Map<String, dynamic>? queryParams}) {
     queryParams ??= {};
-    queryParams[Params.apiKey]=apiKey;
+    queryParams[Parameters.apiKey]=apiKey;
     final res = handleException(
       () => dio.get(
         endPoint,

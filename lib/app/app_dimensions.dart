@@ -1,6 +1,6 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppDimens {
+interface class AppDimensions {
   static double nowShowingPosterWidth = 143.sp;
   static double nowShowingPosterHeight = 212.sp;
   static double nowShowingCardHeight = 310.sp;

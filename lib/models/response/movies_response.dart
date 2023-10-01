@@ -1,4 +1,4 @@
-class MoviesResponse<T> {
+interface class MoviesResponse<T> {
   final int page;
   final int totalPages;
   final int totalResults;

@@ -7,7 +7,7 @@ import 'package:movies_riverpod/features/home/presentation/providers/state/movie
 import 'package:movies_riverpod/models/domain/movies.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class MovieNotifier extends StateNotifier<MovieState> {
+interface class MovieNotifier extends StateNotifier<MovieState> {
   final FetchAndCacheMoviesUseCase _fetchAndCacheMoviesUseCase =
       injector.get<FetchAndCacheMoviesUseCase>();
   final FetchCachedMoviesUseCase _fetchCachedMoviesUseCase =

@@ -3,7 +3,7 @@ import 'package:movies_riverpod/models/cast.dart';
 
 enum CastConcreteState { initial, loading, loaded, failure }
 
-class CastsState extends Equatable {
+interface class CastsState extends Equatable {
   final int id;
   final List<Cast> casts;
   final bool hasData;

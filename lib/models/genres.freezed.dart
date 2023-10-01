@@ -32,7 +32,7 @@ abstract class $GenresCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GenresCopyWithImpl<$Res, $Val extends Genres>
+interface class _$GenresCopyWithImpl<$Res, $Val extends Genres>
     implements $GenresCopyWith<$Res> {
   _$GenresCopyWithImpl(this._value, this._then);
 
@@ -70,7 +70,7 @@ abstract class _$$_GenresCopyWith<$Res> implements $GenresCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GenresCopyWithImpl<$Res>
+interface class __$$_GenresCopyWithImpl<$Res>
     extends _$GenresCopyWithImpl<$Res, _$_Genres>
     implements _$$_GenresCopyWith<$Res> {
   __$$_GenresCopyWithImpl(_$_Genres _value, $Res Function(_$_Genres) _then)
@@ -97,7 +97,7 @@ class __$$_GenresCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Genres extends _Genres {
+interface class _$_Genres extends _Genres {
   const _$_Genres(
       {this.id = Isar.autoIncrement, final List<Genre> genres = const []})
       : _genres = genres,

@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:movies_riverpod/models/response/response.dart';
 
-class AppException implements Exception {
+interface class AppException implements Exception {
   final String? message;
   final int? statusCode;
   final String? identifier;

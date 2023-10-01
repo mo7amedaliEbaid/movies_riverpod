@@ -1,4 +1,4 @@
-class Message {
+interface class Message {
   final String content;
   final MessageType type;
   final DateTime timestamp;

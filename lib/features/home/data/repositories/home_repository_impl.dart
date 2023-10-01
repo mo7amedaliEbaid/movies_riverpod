@@ -10,11 +10,11 @@ import 'package:movies_riverpod/shared/util/app_exception.dart';
 
 import 'package:movies_riverpod/models/genre.dart';
 
-class HomeRepositoryImpl extends HomeRepository {
+interface class HomeRepoImpl extends HomeRepository {
   final HomeRemoteDataSource homeRemoteDataSource;
   final HomeLocalDataSource homeLocalDataSource;
 
-  HomeRepositoryImpl({required this.homeRemoteDataSource, required this.homeLocalDataSource});
+  HomeRepoImpl({required this.homeRemoteDataSource, required this.homeLocalDataSource});
 
   @override
   Future<Either<AppException, Movies>> fetchAndCacheMovies(

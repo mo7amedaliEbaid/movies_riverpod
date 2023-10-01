@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:movies_riverpod/app/app_colors.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/features/notifications/data/models/notification.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 
@@ -12,11 +12,11 @@ class NotificationItem extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Padding(
-      padding:  EdgeInsets.only(top: AppDimens.p4,right: AppDimens.p8,left: AppDimens.p8),
+      padding:  EdgeInsets.only(top: AppDimensions.p4,right: AppDimensions.p8,left: AppDimensions.p8),
       child: Container(
-        padding: EdgeInsets.only(top: AppDimens.p12,bottom: AppDimens.p12,right: AppDimens.p12,left: AppDimens.p12),
+        padding: EdgeInsets.only(top: AppDimensions.p12,bottom: AppDimensions.p12,right: AppDimensions.p12,left: AppDimensions.p12),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(AppDimens.p8),
+          borderRadius: BorderRadius.circular(AppDimensions.p8),
           color: context.theme.brightness == Brightness.light
               ? notificationModel.positive
               ? AppColors.updateNotificationColorLight

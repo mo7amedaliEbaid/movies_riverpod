@@ -1,4 +1,4 @@
-class EndPoints {
+interface class EndPoints {
   static const String nowShowing = 'movie/now_playing';
   static const String popular = 'movie/top_rated';
   static const String genre = 'genre/movie/list';
@@ -8,7 +8,7 @@ class EndPoints {
   static String casts(int id) => '/movie/$id/credits';
 }
 
-class Params {
+interface class Parameters {
   static const String page = 'page';
   static const String apiKey = 'api_key';
 }

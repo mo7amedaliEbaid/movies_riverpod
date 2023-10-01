@@ -1,4 +1,4 @@
-class GenreResponse<T> {
+interface class GenreResponse<T> {
   final List<T> genres;
 
   GenreResponse(this.genres);

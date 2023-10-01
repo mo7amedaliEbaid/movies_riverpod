@@ -3,7 +3,7 @@ import 'package:movies_riverpod/features/bookmarks/domain/repositories/bookmark_
 import 'package:movies_riverpod/models/movie_detail.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class GetBookmarksUseCase {
+interface class GetBookmarksUseCase {
   final BookmarkRepository bookmarkRepository;
 
   GetBookmarksUseCase({required this.bookmarkRepository});

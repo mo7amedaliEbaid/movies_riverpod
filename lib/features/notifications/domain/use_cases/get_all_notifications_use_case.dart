@@ -4,7 +4,7 @@ import 'package:movies_riverpod/features/notifications/domain/repository/notific
 
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class GetAllNotificationsUseCase {
+interface class GetAllNotificationsUseCase {
   final NotificationRepository notificationRepository;
 
   GetAllNotificationsUseCase({required this.notificationRepository});

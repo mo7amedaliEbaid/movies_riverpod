@@ -1,5 +1,5 @@
 import 'package:movies_riverpod/app/app_colors.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -21,7 +21,7 @@ class DrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: AppDimens.p10),
+      padding: EdgeInsets.only(left: AppDimensions.p10),
       child: InkWell(
         onTap: onTap,
         child: ListTile(

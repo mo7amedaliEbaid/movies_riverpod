@@ -1,4 +1,4 @@
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/shared/widgets/drawer_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -32,9 +32,9 @@ class AppDrawer extends ConsumerWidget {
                 style:
                     context.textTheme.titleLarge!.copyWith(color: Colors.white),
               )),
-          SizedBox(height: AppDimens.p10),
+          SizedBox(height: AppDimensions.p10),
           Padding(
-            padding: EdgeInsets.only(top: AppDimens.p6, left: AppDimens.p20),
+            padding: EdgeInsets.only(top: AppDimensions.p6, left: AppDimensions.p20),
             child: Text(
               'Colour Scheme',
               style: context.textTheme.bodyMedium!
@@ -42,7 +42,7 @@ class AppDrawer extends ConsumerWidget {
             ),
           ),
           SizedBox(
-            height: AppDimens.p20,
+            height: AppDimensions.p20,
           ),
           DrawerItem(
               title: 'Dark Mode',

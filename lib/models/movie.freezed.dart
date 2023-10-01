@@ -92,7 +92,7 @@ abstract class $MovieCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MovieCopyWithImpl<$Res, $Val extends Movie>
+interface class _$MovieCopyWithImpl<$Res, $Val extends Movie>
     implements $MovieCopyWith<$Res> {
   _$MovieCopyWithImpl(this._value, this._then);
 
@@ -293,7 +293,7 @@ class __$$_MovieCopyWithImpl<$Res> extends _$MovieCopyWithImpl<$Res, _$_Movie>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_Movie implements _Movie {
+interface class _$_Movie implements _Movie {
   const _$_Movie(
       {@JsonKey(name: 'adult') this.adult = false,
       @JsonKey(name: 'backdrop_path') this.backdropPath = '',

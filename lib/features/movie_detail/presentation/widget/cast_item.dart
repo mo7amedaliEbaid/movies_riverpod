@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/models/cast.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 
@@ -14,9 +14,9 @@ class CastItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: AppDimens.castProfileWidth,
+      width: AppDimensions.castProfileWidth,
       child: Padding(
-        padding: EdgeInsets.only(left: AppDimens.p8) ,
+        padding: EdgeInsets.only(left: AppDimensions.p8) ,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -26,8 +26,8 @@ class CastItem extends StatelessWidget {
                 imageUrl: AppConfigs.preCastProfilePath(cast.profilePath),
                 placeholder: (context, url) => const Center(child:  CircularProgressIndicator()),
                 errorWidget: (context, url,error) =>  const Icon(Icons.broken_image),
-                height: AppDimens.castProfileHeight,
-                width: AppDimens.castProfileWidth,
+                height: AppDimensions.castProfileHeight,
+                width: AppDimensions.castProfileWidth,
                 fit: BoxFit.cover,
               ),
             ),

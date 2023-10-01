@@ -8,7 +8,7 @@ import 'package:isar/isar.dart';
 
 import 'notifications_local_datasource.dart';
 
-class NotificationsLocalDataSourceImpl extends NotificationsLocalDataSource {
+interface class NotificationsLocalDataSourceImpl extends NotificationsLocalDataSource {
   final LocalDb localDb;
 
   NotificationsLocalDataSourceImpl({required this.localDb});

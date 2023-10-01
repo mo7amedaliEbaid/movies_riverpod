@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/shared/widgets/shimmers/skeleton.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -26,22 +26,22 @@ class NowShowingCardShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: AppDimens.nowShowingCardHeight,
-      width: AppDimens.nowShowingCardWidth,
+      height: AppDimensions.nowShowingCardHeight,
+      width: AppDimensions.nowShowingCardWidth,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Skeleton(
-              height: AppDimens.nowShowingPosterHeight,
-              width: AppDimens.nowShowingPosterWidth,
+              height: AppDimensions.nowShowingPosterHeight,
+              width: AppDimensions.nowShowingPosterWidth,
               left: 6,
               right: 0,
               top: 0,
               bottom: 0),
           Skeleton(
             height: 10,
-            width: AppDimens.nowShowingPosterWidth,
+            width: AppDimensions.nowShowingPosterWidth,
             left: 10,
             right: 10,
             top: 6,
@@ -49,7 +49,7 @@ class NowShowingCardShimmer extends StatelessWidget {
           ),
           Skeleton(
             height: 10,
-            width: AppDimens.nowShowingPosterWidth,
+            width: AppDimensions.nowShowingPosterWidth,
             left: 10,
             right: 10,
             top: 4,

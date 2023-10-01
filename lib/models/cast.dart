@@ -7,7 +7,7 @@ part 'cast.g.dart';
 
 @freezed
 @Embedded(ignore: {'copyWith'})
-class Cast with _$Cast {
+interface class Cast with _$Cast {
   const factory Cast(
       {@JsonKey(name: 'id') @Default(0) int id,
       @JsonKey(name: 'name') @Default('') String name,

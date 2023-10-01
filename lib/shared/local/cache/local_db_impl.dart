@@ -8,7 +8,7 @@ import 'package:path_provider/path_provider.dart';
 import 'local_db.dart';
 
 
-class InitDbImpl extends LocalDb {
+interface class InitDbImpl extends LocalDb {
   late Isar db;
 
   @override

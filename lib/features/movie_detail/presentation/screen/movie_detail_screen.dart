@@ -33,9 +33,11 @@ class _MovieDetailScreenState extends ConsumerState<MovieDetailScreen> {
     return Scaffold(
         body: notifier.state == MovieDetailConcreteState.loading
             ? const Center(child: CircularProgressIndicator())
-            : CustomScrollView(slivers: [
-                MovieDetailHeader(movieDetail: notifier.movieDetail),
-                MovieDetailBody(movieDetail: notifier.movieDetail)
-              ]));
+            : SafeArea(
+              child: CustomScrollView(slivers: [
+                  MovieDetailHeader(movieDetail: notifier.movieDetail),
+                  MovieDetailBody(movieDetail: notifier.movieDetail)
+                ]),
+            ));
   }
 }

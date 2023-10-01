@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/shared/widgets/shimmers/skeleton.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -26,27 +26,27 @@ class PopularCardShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: AppDimens.popularPosterHeight,
+      height: AppDimensions.popularPosterHeight,
       child: Padding(
-        padding: EdgeInsets.only(top: AppDimens.p8, left: AppDimens.p18, right: AppDimens.p18),
+        padding: EdgeInsets.only(top: AppDimensions.p8, left: AppDimensions.p18, right: AppDimensions.p18),
         child: Row(
           children:[
             Skeleton(
-                height: AppDimens.popularPosterHeight,
-                width: AppDimens.popularPosterWidth,
+                height: AppDimensions.popularPosterHeight,
+                width: AppDimensions.popularPosterWidth,
                 left: 0,
                 right: 0,
                 top: 0,
                 bottom: 0),
             Container(
-               padding: EdgeInsets.only(left: AppDimens.p12, top: AppDimens.p10),
+               padding: EdgeInsets.only(left: AppDimensions.p12, top: AppDimensions.p10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Skeleton(
                     height: 20,
-                    width: AppDimens.nowShowingPosterWidth,
+                    width: AppDimensions.nowShowingPosterWidth,
                     left: 0,
                     right: 0,
                     top: 0,
@@ -54,7 +54,7 @@ class PopularCardShimmer extends StatelessWidget {
                   ),
                   Skeleton(
                     height: 15,
-                    width: AppDimens.nowShowingPosterWidth,
+                    width: AppDimensions.nowShowingPosterWidth,
                     left: 0,
                     right: 0,
                     top: 8,
@@ -62,7 +62,7 @@ class PopularCardShimmer extends StatelessWidget {
                   ),
                   Skeleton(
                     height: 25,
-                    width: AppDimens.nowShowingPosterWidth,
+                    width: AppDimensions.nowShowingPosterWidth,
                     left: 0,
                     right: 0,
                     top: 8,

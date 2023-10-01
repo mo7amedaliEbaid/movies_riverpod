@@ -8,7 +8,7 @@ import 'package:movies_riverpod/shared/network/network_values.dart';
 
 
 
-class MovieDetailRemoteDataSourceImpl extends MovieDetailRemoteDataSource {
+interface class MovieDetailRemoteDataSourceImpl extends MovieDetailRemoteDataSource {
   final NetworkService networkService;
 
   MovieDetailRemoteDataSourceImpl({required this.networkService});

@@ -11,7 +11,7 @@ enum MoviesConcreteState {
   fetchedAllMovies,
 }
 
-class MovieState extends Equatable {
+interface class MovieState extends Equatable {
   final List<Movie> movies;
   final int page;
   final int totalPages;

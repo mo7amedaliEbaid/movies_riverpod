@@ -3,7 +3,7 @@ import 'package:movies_riverpod/features/movie_detail/domain/repositories/movie_
 import 'package:movies_riverpod/models/movie_detail.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class GetMovieDetailsUseCase {
+interface class GetMovieDetailsUseCase {
   final MovieDetailRepository movieDetailRepository;
 
   GetMovieDetailsUseCase({required this.movieDetailRepository});

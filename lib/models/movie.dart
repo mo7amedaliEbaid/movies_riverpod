@@ -7,7 +7,7 @@ part 'movie.g.dart';
 
 @freezed
 @Embedded(ignore: {'copyWith'})
-class Movie with _$Movie {
+interface class Movie with _$Movie {
   @JsonSerializable(explicitToJson: true)
   const factory Movie(
       {@JsonKey(name: 'adult') @Default(false) bool adult,

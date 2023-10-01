@@ -7,11 +7,11 @@ import 'package:movies_riverpod/models/response/casts_response.dart';
 
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class MovieDetailRepositoryImpl extends MovieDetailRepository {
+interface class MovieDetailRepoImpl extends MovieDetailRepository {
   final MovieDetailRemoteDataSource movieDetailDataSource;
   final MovieDetailLocalDataSource movieDetailLocalDataSource;
 
-  MovieDetailRepositoryImpl(
+  MovieDetailRepoImpl(
       {required this.movieDetailDataSource,
       required this.movieDetailLocalDataSource});
 

@@ -3,7 +3,7 @@ import 'package:movies_riverpod/features/home/domain/repositories/home_repositor
 import 'package:movies_riverpod/models/genres.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class FetchAndCacheGenreUseCase {
+interface class FetchAndCacheGenreUseCase {
   final HomeRepository homeRepository;
 
   FetchAndCacheGenreUseCase({required this.homeRepository});

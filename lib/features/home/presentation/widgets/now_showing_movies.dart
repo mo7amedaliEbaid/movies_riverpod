@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/features/home/presentation/providers/home_state_notifier_provider.dart';
 import 'package:movies_riverpod/features/home/presentation/widgets/now_showing_card.dart';
 import 'package:movies_riverpod/features/home/presentation/widgets/shimmer/now_showing_shimmer.dart';
@@ -16,7 +16,7 @@ class NowShowingMovies extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final nowShowingMoviesState = ref.watch(nowShowingMoviesStateNotifier);
     return SizedBox(
-      height: AppDimens.nowShowingCardHeight,
+      height: AppDimensions.nowShowingCardHeight,
       child: nowShowingMoviesState.hasData
           ? ListView.builder(
               controller: scrollController,

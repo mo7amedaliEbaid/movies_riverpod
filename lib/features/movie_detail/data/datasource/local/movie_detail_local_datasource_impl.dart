@@ -4,7 +4,7 @@ import 'package:movies_riverpod/models/movie_detail.dart';
 import 'package:movies_riverpod/shared/local/cache/local_db.dart';
 import 'package:isar/isar.dart';
 
-class MovieDetailLocalDataSourceImpl extends MovieDetailLocalDataSource {
+interface class MovieDetailLocalDataSourceImpl extends MovieDetailLocalDataSource {
   LocalDb localDb;
 
   MovieDetailLocalDataSourceImpl({required this.localDb});

@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
-import 'package:movies_riverpod/app/app_dimens.dart';
+import 'package:movies_riverpod/app/app_dimensions.dart';
 
 import 'package:movies_riverpod/models/movie.dart';
 
@@ -16,9 +16,9 @@ class NowShowingMovieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: AppDimens.nowShowingCardWidth,
+      width: AppDimensions.nowShowingCardWidth,
       child: Padding(
-        padding: EdgeInsets.only(left: AppDimens.p6),
+        padding: EdgeInsets.only(left: AppDimensions.p6),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,14 +37,14 @@ class NowShowingMovieCard extends StatelessWidget {
                       const Center(child: CircularProgressIndicator()),
                   errorWidget: (context, url, error) =>
                       const Icon(Icons.broken_image),
-                  width: AppDimens.nowShowingPosterWidth,
-                  height: AppDimens.nowShowingPosterHeight,
+                  width: AppDimensions.nowShowingPosterWidth,
+                  height: AppDimensions.nowShowingPosterHeight,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: AppDimens.p6, left: AppDimens.p8),
+              padding: EdgeInsets.only(top: AppDimensions.p6, left: AppDimensions.p8),
               child: Text(
                 movie.title,
                 style: Theme.of(context).textTheme.titleSmall,
@@ -52,7 +52,7 @@ class NowShowingMovieCard extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: AppDimens.p2, left: AppDimens.p8),
+              padding: EdgeInsets.only(top: AppDimensions.p2, left: AppDimensions.p8),
               child: RatingBar(rating: movie.voteAverage),
             )
           ],

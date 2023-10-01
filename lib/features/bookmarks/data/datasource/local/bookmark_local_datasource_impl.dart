@@ -6,7 +6,7 @@ import 'package:movies_riverpod/shared/local/cache/local_db.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 import 'package:isar/isar.dart';
 
-class BookmarkLocalDataSourceImpl extends BookmarkLocalDataSource {
+interface class BookmarkLocalDataSourceImpl extends BookmarkLocalDataSource {
   LocalDb localDb;
 
   BookmarkLocalDataSourceImpl({required this.localDb});

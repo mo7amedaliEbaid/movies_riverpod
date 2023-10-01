@@ -3,7 +3,7 @@ import 'package:movies_riverpod/features/home/domain/repositories/home_repositor
 import 'package:movies_riverpod/models/domain/movies.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-class FetchCachedMoviesUseCase {
+interface class FetchCachedMoviesUseCase {
   final HomeRepository homeRepository;
 
   FetchCachedMoviesUseCase({required this.homeRepository});

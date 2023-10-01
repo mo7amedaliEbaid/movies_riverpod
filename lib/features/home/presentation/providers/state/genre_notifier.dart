@@ -8,8 +8,7 @@ import 'package:movies_riverpod/shared/util/app_exception.dart';
 
 import 'genre_state.dart';
 
-class GenreNotifier extends StateNotifier<GenreState> {
-  // final HomeRepository homeRepository = injector.get<HomeRepository>();
+interface class GenreNotifier extends StateNotifier<GenreState> {
 
   final FetchAndCacheGenreUseCase _fetchAndCacheGenreUseCase =
       injector.get<FetchAndCacheGenreUseCase>();
