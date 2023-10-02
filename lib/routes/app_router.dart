@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_riverpod/features/home/presentation/screens/home_page.dart';
+import 'package:movies_riverpod/features/map/find_cinemas.dart';
 import 'package:movies_riverpod/features/movie_detail/presentation/screen/movie_detail_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -10,6 +11,7 @@ enum Routes {
   home,
   movieDetail,
   bookmarks,
+  map,
 }
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -33,6 +35,13 @@ GoRouter goRouter(GoRouterRef ref) {
           name: Routes.movieDetail.name,
           builder: (context, state) => MovieDetailScreen(
               key: state.pageKey, movieId: state.extra as int)),
+      GoRoute(
+        path: '/map',
+        name: Routes.map.name,
+        builder: (context, state) => FindCinemas(
+          key: state.pageKey,
+        ),
+      ),
     ],
   );
 }
