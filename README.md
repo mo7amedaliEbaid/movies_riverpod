@@ -14,7 +14,7 @@
 
 <p float="left">
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/details.jpg" width="170" />
-   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/details1.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/495018f2b45dd20cb47c7e2cc336279c5174b34e/screenshots/detailslight.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/drawe-light.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/fav.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/homedark.jpg" width="170" />
