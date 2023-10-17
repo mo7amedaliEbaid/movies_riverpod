@@ -1,8 +1,7 @@
 //import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 sealed class AppConstants {
-  static const String NOW_SHOWING = 'now_showing';
-  static const String POPULAR = 'popular';
+
   static const String LENGTH = 'Length';
   static const String LANGUAGE = 'Language';
   static const String RATING = 'Rating';
@@ -11,6 +10,9 @@ sealed class AppConstants {
 
   //App
   static const String CURRENT_THEME = 'theme';
+
+  //assets
+  static const DRAWER_IMAGE="assets/images/movies/drawer.png";
 
 /*static  List<dynamic> cinemas = [
     {

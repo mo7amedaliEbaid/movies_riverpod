@@ -10,6 +10,7 @@ sealed class AppDimensions {
   static double castProfileHeight = 70.sp;
   static double castProfileWidth = 70.sp;
   static double movieDetailBackdropHeight = 200.sp;
+  static double drawerwidth=250.sp;
 
   //paddings
   static double p2 = 2.sp;

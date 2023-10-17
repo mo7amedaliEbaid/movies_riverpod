@@ -1,3 +1,4 @@
+import 'package:movies_riverpod/app/app_constants.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/shared/widgets/drawer_item.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class AppDrawer extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final currentThemeState = ref.watch(appThemeProvider);
     return Drawer(
+      width:AppDimensions.drawerwidth,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               topRight: Radius.circular(16.sp),
@@ -24,7 +26,7 @@ class AppDrawer extends ConsumerWidget {
           DrawerHeader(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('assets/images/movies/drawer.png'),
+                    image: AssetImage(AppConstants.DRAWER_IMAGE),
                     fit: BoxFit.cover),
               ),
               child: Text(
