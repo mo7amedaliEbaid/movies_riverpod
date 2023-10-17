@@ -26,6 +26,8 @@
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/homedark.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/homelight.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/notidark.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/b4fe4be00483dd40cfc78c66f71d37bdf526cf22/screenshots/upcominglight.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/b4fe4be00483dd40cfc78c66f71d37bdf526cf22/screenshots/upcoming_dark.jpg" width="170" />
 </p>
 
 
