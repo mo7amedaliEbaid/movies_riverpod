@@ -2,20 +2,21 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:movies_riverpod/features/bookmarks/presentation/screens/bookmark_screen.dart';
-import 'package:movies_riverpod/features/home/presentation/screens/home_screen.dart';
+import 'package:movies_riverpod/features/movies/presentation/screens/home_screen.dart';
+import 'package:movies_riverpod/features/movies/presentation/screens/upcoming_screen.dart';
 import 'package:movies_riverpod/shared/widgets/app_bar.dart';
 import 'package:movies_riverpod/shared/widgets/app_bottom_navigation.dart';
 import 'package:movies_riverpod/shared/widgets/app_drawer.dart';
 
-class HomePage extends StatefulWidget {
+class Movies extends StatefulWidget {
 
-   const HomePage({Key? key}) : super(key: key);
+   const Movies({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Movies> createState() => _MoviesState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MoviesState extends State<Movies> {
   int _currentIndex = 0;
 
   @override
@@ -39,6 +40,8 @@ class _HomePageState extends State<HomePage> {
       case 0:
         return  const HomeScreen();
       case 1:
+        return const UpcomingScreen();
+      case 2:
         return const BookmarkScreen();
       default:
         return Container();

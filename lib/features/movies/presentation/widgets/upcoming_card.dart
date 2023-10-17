@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
-import 'package:movies_riverpod/features/home/presentation/providers/home_state_notifier_provider.dart';
+import 'package:movies_riverpod/app/app_text_styles.dart';
+import 'package:movies_riverpod/features/movies/presentation/providers/movies_state_notifier_provider.dart';
 import 'package:movies_riverpod/models/movie.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/shared/widgets/genre_chip.dart';
@@ -12,17 +13,19 @@ import 'package:movies_riverpod/shared/widgets/rating_bar.dart';
 
 import '../providers/state/genre_state.dart';
 
-
-class PopularMovie extends ConsumerWidget {
+class UpcomingMovie extends ConsumerWidget {
   final Movie movie;
 
-  const PopularMovie({Key? key, required this.movie}) : super(key: key);
+  const UpcomingMovie({Key? key, required this.movie}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final genreState = ref.watch(genreStateNotifier);
     return Container(
-      padding: EdgeInsets.only(top: AppDimensions.p8, left: AppDimensions.p18, right: AppDimensions.p18),
+      padding: EdgeInsets.only(
+          top: AppDimensions.p8,
+          left: AppDimensions.p18,
+          right: AppDimensions.p18),
       child: Row(
         children: [
           Card(
@@ -46,7 +49,8 @@ class PopularMovie extends ConsumerWidget {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(left: AppDimensions.p12, top: AppDimensions.p10),
+              padding: EdgeInsets.only(
+                  left: AppDimensions.p12, top: AppDimensions.p10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,19 +65,34 @@ class PopularMovie extends ConsumerWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: AppDimensions.p8,),
-                  RatingBar(rating: movie.voteAverage),
-                  SizedBox(height: AppDimensions.p8,),
-                  if (genreState.state == GenreConcreteState.loaded) SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: movie.genreIds.map((label) {
-                        final genre = genreState.genres
-                            .firstWhere((element) => element.id == label);
-                        return GenreChip(label: genre.name);
-                      }).toList(),
-                    ),
-                  )
+                  SizedBox(
+                    height: AppDimensions.p8,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      RatingBar(rating: movie.voteAverage),
+                      Text(
+                        movie.releaseDate,
+                        style: AppTextStyles.bodyMedium
+                            .copyWith(color: Colors.red),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: AppDimensions.p8,
+                  ),
+                  if (genreState.state == GenreConcreteState.loaded)
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: movie.genreIds.map((label) {
+                          final genre = genreState.genres
+                              .firstWhere((element) => element.id == label);
+                          return GenreChip(label: genre.name);
+                        }).toList(),
+                      ),
+                    )
                 ],
               ),
             ),

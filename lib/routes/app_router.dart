@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_riverpod/features/home/presentation/screens/home_page.dart';
+import 'package:movies_riverpod/features/movies/presentation/screens/movies.dart';
 import 'package:movies_riverpod/features/map/find_cinemas.dart';
 import 'package:movies_riverpod/features/movie_detail/presentation/screen/movie_detail_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -26,7 +26,7 @@ GoRouter goRouter(GoRouterRef ref) {
       GoRoute(
         path: '/',
         name: Routes.home.name,
-        builder: (context, state) => HomePage(
+        builder: (context, state) => Movies(
           key: state.pageKey,
         ),
       ),

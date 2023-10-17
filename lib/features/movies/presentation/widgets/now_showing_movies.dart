@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
-import 'package:movies_riverpod/features/home/presentation/providers/home_state_notifier_provider.dart';
-import 'package:movies_riverpod/features/home/presentation/widgets/now_showing_card.dart';
-import 'package:movies_riverpod/features/home/presentation/widgets/shimmer/now_showing_shimmer.dart';
+import 'package:movies_riverpod/features/movies/presentation/providers/movies_state_notifier_provider.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/now_showing_card.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/shimmer/now_showing_shimmer.dart';
 import 'package:movies_riverpod/routes/app_router.dart';
 import 'package:go_router/go_router.dart';
 

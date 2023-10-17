@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:movies_riverpod/features/home/data/datasource/remote/home_remote_data_source.dart';
+import 'package:movies_riverpod/features/movies/data/datasource/remote/home_remote_data_source.dart';
 import 'package:movies_riverpod/models/response/genre_response.dart';
 import 'package:movies_riverpod/models/response/movies_response.dart';
 import 'package:movies_riverpod/shared/network/network_service.dart';

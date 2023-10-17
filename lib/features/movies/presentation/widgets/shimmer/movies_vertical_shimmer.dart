@@ -3,8 +3,8 @@ import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/shared/widgets/shimmers/skeleton.dart';
 import 'package:shimmer/shimmer.dart';
 
-class PopularMoviesShimmer extends StatelessWidget {
-  const PopularMoviesShimmer({Key? key}) : super(key: key);
+class MoviesVerticalListShimmer extends StatelessWidget {
+  const MoviesVerticalListShimmer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +15,13 @@ class PopularMoviesShimmer extends StatelessWidget {
             scrollDirection: Axis.vertical,
             itemCount: 3,
             itemBuilder: (context, index) {
-              return const PopularCardShimmer();
+              return const MoviesVerticalCardShimmer();
             }));
   }
 }
 
-class PopularCardShimmer extends StatelessWidget {
-  const PopularCardShimmer({Key? key}) : super(key: key);
+class MoviesVerticalCardShimmer extends StatelessWidget {
+  const MoviesVerticalCardShimmer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

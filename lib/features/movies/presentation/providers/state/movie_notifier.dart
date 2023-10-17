@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:movies_riverpod/features/home/domain/use_cases/fetch_and_cache_movies_use_case.dart';
-import 'package:movies_riverpod/features/home/domain/use_cases/fetch_cached_movies_use_case.dart';
+import 'package:movies_riverpod/features/movies/domain/use_cases/fetch_and_cache_movies_use_case.dart';
+import 'package:movies_riverpod/features/movies/domain/use_cases/fetch_cached_movies_use_case.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/di/Injector.dart';
-import 'package:movies_riverpod/features/home/presentation/providers/state/movie_state.dart';
+import 'package:movies_riverpod/features/movies/presentation/providers/state/movie_state.dart';
 import 'package:movies_riverpod/models/domain/movies.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 

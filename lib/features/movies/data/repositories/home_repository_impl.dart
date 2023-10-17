@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
-import 'package:movies_riverpod/features/home/data/datasource/local/home_local_datasource.dart';
-import 'package:movies_riverpod/features/home/data/datasource/remote/home_remote_data_source.dart';
-import 'package:movies_riverpod/features/home/domain/repositories/home_repository.dart';
+import 'package:movies_riverpod/features/movies/data/datasource/local/home_local_datasource.dart';
+import 'package:movies_riverpod/features/movies/data/datasource/remote/home_remote_data_source.dart';
+import 'package:movies_riverpod/features/movies/domain/repositories/home_repository.dart';
 import 'package:movies_riverpod/models/domain/movies.dart';
 import 'package:movies_riverpod/models/genres.dart';
 import 'package:movies_riverpod/models/movie.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movies_riverpod/features/home/presentation/providers/home_state_notifier_provider.dart';
+import 'package:movies_riverpod/features/movies/presentation/providers/movies_state_notifier_provider.dart';
 
-import 'package:movies_riverpod/features/home/presentation/widgets/popular_card.dart';
-import 'package:movies_riverpod/features/home/presentation/widgets/shimmer/popular_shimmer.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/popular_card.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/shimmer/movies_vertical_shimmer.dart';
 import 'package:movies_riverpod/routes/app_router.dart';
 import 'package:go_router/go_router.dart';
 
@@ -30,6 +30,6 @@ class PopularMovies extends ConsumerWidget {
             return const Center(child: CircularProgressIndicator());
           }
         }, childCount: popularMoviesState.movies.length + 1))
-        : const SliverFillRemaining(hasScrollBody: true,child: PopularMoviesShimmer());
+        : const SliverFillRemaining(hasScrollBody: true,child: MoviesVerticalListShimmer());
   }
 }

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/app/app_strings.dart';
-import 'package:movies_riverpod/features/home/presentation/providers/home_state_notifier_provider.dart';
-import 'package:movies_riverpod/features/home/presentation/widgets/now_showing_movies.dart';
-import 'package:movies_riverpod/features/home/presentation/widgets/popular_movies.dart';
+import 'package:movies_riverpod/features/movies/presentation/providers/movies_state_notifier_provider.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/now_showing_movies.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/popular_movies.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/shared/network/network_values.dart';
 
@@ -57,19 +57,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           controller: popularControl, slivers: [
         SliverToBoxAdapter(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: AppDimensions.p18, right: AppDimensions.p18, top: AppDimensions.p8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    AppStrings.nowShowing,
-                    style: context.textTheme.titleMedium,
-                  ),
-                  // const SeeMore()
-                ],
+                  left: AppDimensions.p18, bottom: AppDimensions.p8, top: AppDimensions.p18),
+              child: Text(
+                AppStrings.nowShowing,
+                style: context.textTheme.titleMedium,
               ),
             ),
             NowShowingMovies(
@@ -77,16 +72,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ),
             Padding(
               padding:
-                  EdgeInsets.only(left: AppDimensions.p18, right: AppDimensions.p18),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    AppStrings.popular,
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  // const SeeMore()
-                ],
+                  EdgeInsets.only(left: AppDimensions.p18,bottom: AppDimensions.p8,),
+              child: Text(
+                AppStrings.popular,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
           ],
