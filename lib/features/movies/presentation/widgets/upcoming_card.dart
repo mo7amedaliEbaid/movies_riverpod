@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:movies_riverpod/app/app_colors.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/app/app_text_styles.dart';
@@ -23,15 +24,22 @@ class UpcomingMovie extends ConsumerWidget {
     final genreState = ref.watch(genreStateNotifier);
     return Container(
       padding: EdgeInsets.only(
-          top: AppDimensions.p8,
-          left: AppDimensions.p18,
-          right: AppDimensions.p18),
+        top: AppDimensions.p8,
+        left: AppDimensions.p18,
+        right: AppDimensions.p18,
+        bottom: AppDimensions.p8,
+      ),
+      decoration: BoxDecoration(
+          border: Border.symmetric(
+              horizontal: BorderSide(
+                  color: AppColors.upcomingbordersColor, width: .5))),
       child: Row(
         children: [
           Card(
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(AppDimensions.p8),
-            ),
+                borderRadius: BorderRadius.circular(AppDimensions.p8),
+                side: BorderSide(
+                    color: AppColors.upcomingbordersColor, width: 1)),
             elevation: 8.0,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(AppDimensions.p8),
@@ -43,7 +51,7 @@ class UpcomingMovie extends ConsumerWidget {
                     const Icon(Icons.broken_image),
                 width: AppDimensions.popularPosterWidth,
                 height: AppDimensions.popularPosterHeight,
-                fit: BoxFit.cover,
+                fit: BoxFit.contain,
               ),
             ),
           ),
@@ -68,17 +76,7 @@ class UpcomingMovie extends ConsumerWidget {
                   SizedBox(
                     height: AppDimensions.p8,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      RatingBar(rating: movie.voteAverage),
-                      Text(
-                        movie.releaseDate,
-                        style: AppTextStyles.bodyMedium
-                            .copyWith(color: Colors.red),
-                      )
-                    ],
-                  ),
+                  RatingBar(rating: movie.voteAverage),
                   SizedBox(
                     height: AppDimensions.p8,
                   ),
@@ -92,7 +90,13 @@ class UpcomingMovie extends ConsumerWidget {
                           return GenreChip(label: genre.name);
                         }).toList(),
                       ),
-                    )
+                    ),
+                  Text(
+                    movie.overview,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTextStyles.bodyMedium,
+                  )
                 ],
               ),
             ),
