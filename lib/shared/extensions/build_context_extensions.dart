@@ -9,5 +9,5 @@ extension BuildContextExtension on BuildContext {
 
   double get sizeHeight => MediaQuery.of(this).size.height;
 
-  Orientation get orientation => MediaQuery.of(this).orientation;
+ // Orientation get orientation => MediaQuery.of(this).orientation;
 }

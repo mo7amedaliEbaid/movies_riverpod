@@ -15,9 +15,9 @@ class MyApp extends ConsumerWidget {
     final goRouter = ref.watch(goRouterProvider);
     final themeMode = ref.watch(appThemeProvider);
     return ScreenUtilInit(
-        designSize: const Size(375, 812),
-        minTextAdapt: true,
-        splitScreenMode: true,
+      //  designSize: const Size(375, 812),
+      //  minTextAdapt: true,
+      //  splitScreenMode: true,
         builder: (BuildContext context, Widget? child) {
           return MaterialApp.router(
             title: AppStrings.appName,

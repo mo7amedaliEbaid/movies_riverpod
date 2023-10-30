@@ -14,10 +14,10 @@ Future<void> runMain() async {
   provideDataSources();
   provideRepositories();
   provideUseCases();
-  SystemChrome.setPreferredOrientations([
+/*  SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
-  ]);
+  ]);*/
 
   runApp(ProviderScope(
     observers: [
