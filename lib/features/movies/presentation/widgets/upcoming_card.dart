@@ -29,10 +29,11 @@ class UpcomingMovie extends ConsumerWidget {
         right: AppDimensions.p18,
         bottom: AppDimensions.p8,
       ),
+
       decoration: BoxDecoration(
-          border: Border.symmetric(
+          border:Border.symmetric(
               horizontal: BorderSide(
-                  color: AppColors.upcomingbordersColor, width: .5))),
+                  color: AppColors.upcomingbordersColor, width: .3))),
       child: Row(
         children: [
           Card(

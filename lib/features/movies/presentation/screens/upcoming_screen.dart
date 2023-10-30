@@ -66,7 +66,7 @@ class _UpcomingScreenState extends ConsumerState<UpcomingScreen> {
               Padding(
                 padding: EdgeInsets.only(
                   left: AppDimensions.p18,
-                  bottom: AppDimensions.p8,
+                  bottom: AppDimensions.p24,
                 ),
                 child: Text(
                   AppStrings.upcoming,
@@ -76,6 +76,7 @@ class _UpcomingScreenState extends ConsumerState<UpcomingScreen> {
             ],
           ),
         ),
+
         const UpcomingMovies()
       ]),
     );
