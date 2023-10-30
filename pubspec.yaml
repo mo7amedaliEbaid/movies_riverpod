@@ -38,6 +38,7 @@ dependencies:
   flutter_riverpod:
   riverpod_generator:
   dio:
+  logger:
   flutter_svg:
   freezed_annotation:
   freezed:

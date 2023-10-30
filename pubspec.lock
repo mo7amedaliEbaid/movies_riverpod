@@ -41,6 +41,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
+  auto_route:
+    dependency: transitive
+    description:
+      name: auto_route
+      sha256: "35e5c7f8de56ec07c40fca4c953cb7d1d113e26d50bd876a4130a9b874923f27"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.8.1"
+  auto_route_generator:
+    dependency: "direct dev"
+    description:
+      name: auto_route_generator
+      sha256: e7aa9ab44b77cd31a4619d94db645ab5736e543fd0b4c6058c281249e479dfb8
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.3.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -504,6 +520,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      sha256: "6bbb9d6f7056729537a4309bda2e74e18e5d9f14302489cc1e93f33b3fe32cac"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2+1"
   logging:
     dependency: transitive
     description:
