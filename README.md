@@ -3,6 +3,7 @@
 - Movies App.
 - Clean Architecture.
 - Riverpod State Management.
+- Dependency injection.
 - Multiple Themes.
 - Bookmarks.
 - Google Maps.
