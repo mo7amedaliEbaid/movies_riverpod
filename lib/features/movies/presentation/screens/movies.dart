@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:movies_riverpod/features/bookmarks/presentation/screens/bookmark_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/home_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/upcoming_screen.dart';
-import 'package:movies_riverpod/responsive/responsive.dart';
+import 'package:movies_riverpod/shared/responsive/responsive.dart';
 import 'package:movies_riverpod/shared/widgets/app_bar.dart';
 import 'package:movies_riverpod/shared/widgets/app_bottom_navigation.dart';
 import 'package:movies_riverpod/shared/widgets/app_drawer.dart';
@@ -23,13 +23,13 @@ class _MoviesState extends State<Movies> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Responsive.isDesktop(context)
-          ? CustomAppBar(
+          ? const CustomAppBar(
               isDesktop: true,
             )
-          : CustomAppBar(
+          : const CustomAppBar(
               isDesktop: false,
             ),
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       body: homePageBody(),
       bottomNavigationBar: AppBottomNavigation(
         currentIndex: _currentIndex,
