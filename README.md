@@ -41,7 +41,7 @@
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/df2799037a11fbf2aba7b46b371eb1c8f4771470/screenshots/notidark.jpg" width="170" />
 </p>
 
-#### Desktop.
+#### Desktop "Linux".
 
 <p float="left">
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/379a8f6fb4de4a16deb1a379bfe4ca1101f3c4a5/screenshots/linux1.png" width="570" />
