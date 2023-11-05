@@ -1,12 +1,14 @@
 # movies_riverpod
  
-- Movies App.
+- Flutter MultiPlatform Movies App.
+- It's been successfully tested on Mobile (Android, Ios), and Desktop(Linux).
 - Clean Architecture.
 - Riverpod State Management.
 - Dependency injection.
 - Multiple Themes.
+- Responsive Design (Mobile, Desktop).
 - Bookmarks.
-- Google Maps.
+- Google Maps "Removed for now".
 - Upcoming Screen.
 - Home Screen.
 - Movie Details Screen.
@@ -23,6 +25,8 @@
 
 ## Screen Shots
 
+#### Mobile.
+
 <p float="left">
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/d044e3c1b86356c5dad1392a78ec978a3b61e72a/screenshots/details.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/495018f2b45dd20cb47c7e2cc336279c5174b34e/screenshots/detailslight.jpg" width="170" />
@@ -35,6 +39,14 @@
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/cffcba51c3fb2fcec0371896a9c2c716801cec15/screenshots/upcom_dark.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/cffcba51c3fb2fcec0371896a9c2c716801cec15/screenshots/upcom_light.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/df2799037a11fbf2aba7b46b371eb1c8f4771470/screenshots/notidark.jpg" width="170" />
+</p>
+
+#### Desktop.
+
+<p float="left">
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/379a8f6fb4de4a16deb1a379bfe4ca1101f3c4a5/screenshots/linux1.png" width="570" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/379a8f6fb4de4a16deb1a379bfe4ca1101f3c4a5/screenshots/linux3.png" width="570" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/379a8f6fb4de4a16deb1a379bfe4ca1101f3c4a5/screenshots/linux2.png" width="570" />
 </p>
 
 
