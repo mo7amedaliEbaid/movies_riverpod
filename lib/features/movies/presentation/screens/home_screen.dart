@@ -19,9 +19,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    Future((){
-      ref.read(nowShowingMoviesStateNotifier.notifier).getMovies(type: EndPoints.nowShowing);
-      ref.read(popularMoviesStateNotifier.notifier).getMovies(type: EndPoints.popular);
+    Future(() {
+      ref
+          .read(nowShowingMoviesStateNotifier.notifier)
+          .getMovies(type: EndPoints.nowShowing);
+      ref
+          .read(popularMoviesStateNotifier.notifier)
+          .getMovies(type: EndPoints.popular);
     });
     nowShowingControl.addListener(nowShowingScrollListener);
     popularControl.addListener(popularScrollListener);
@@ -40,28 +44,33 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   void nowShowingScrollListener() {
     if (nowShowingControl.position.maxScrollExtent ==
         nowShowingControl.offset) {
-      ref.read(nowShowingMoviesStateNotifier.notifier).getMovies(type: EndPoints.nowShowing);
+      ref
+          .read(nowShowingMoviesStateNotifier.notifier)
+          .getMovies(type: EndPoints.nowShowing);
     }
   }
 
   void popularScrollListener() {
     if (popularControl.position.maxScrollExtent == popularControl.offset) {
-      ref.read(popularMoviesStateNotifier.notifier).getMovies(type: EndPoints.popular);
+      ref
+          .read(popularMoviesStateNotifier.notifier)
+          .getMovies(type: EndPoints.popular);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-          controller: popularControl, slivers: [
+      body: CustomScrollView(controller: popularControl, slivers: [
         SliverToBoxAdapter(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: AppDimensions.p18, bottom: AppDimensions.p8, top: AppDimensions.p18),
+                  left: AppDimensions.p18,
+                  bottom: AppDimensions.p8,
+                  top: AppDimensions.p18),
               child: Text(
                 AppStrings.nowShowing,
                 style: context.textTheme.titleMedium,
@@ -71,8 +80,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               scrollController: nowShowingControl,
             ),
             Padding(
-              padding:
-                  EdgeInsets.only(left: AppDimensions.p18,bottom: AppDimensions.p8,),
+              padding: EdgeInsets.only(
+                left: AppDimensions.p18,
+                bottom: AppDimensions.p8,
+              ),
               child: Text(
                 AppStrings.popular,
                 style: Theme.of(context).textTheme.titleMedium,

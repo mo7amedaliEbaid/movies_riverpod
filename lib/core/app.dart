@@ -17,6 +17,7 @@ class MyApp extends ConsumerWidget {
     return ScreenUtilInit(
         minTextAdapt: true,
         splitScreenMode: true,
+        ensureScreenSize: true,
         builder: (BuildContext context, Widget? child) {
           return MaterialApp.router(
             title: AppStrings.appName,

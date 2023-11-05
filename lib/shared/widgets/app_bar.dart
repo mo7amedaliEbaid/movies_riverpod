@@ -6,7 +6,8 @@ import 'package:movies_riverpod/features/notifications/presentation/screen/notif
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+  const CustomAppBar({Key? key, required this.isDesktop}) : super(key: key);
+  final bool isDesktop;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         onTap: () {
           Scaffold.of(context).openDrawer();
         },
-        child:  Padding(
+        child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Icon(
             Icons.menu,
@@ -38,7 +39,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: () {
                 notificationBottomSheet(context);
               },
-              icon:  Icon(
+              icon: Icon(
                 Icons.notification_add,
                 color: iconColor,
               )),
@@ -48,5 +49,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(50.sp);
+  Size get preferredSize =>isDesktop?Size.fromHeight(20.sp): Size.fromHeight(50.sp);
 }
+
