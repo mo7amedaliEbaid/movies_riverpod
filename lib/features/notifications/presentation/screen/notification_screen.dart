@@ -4,11 +4,17 @@ import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/features/notifications/presentation/provider/notification_provider.dart';
 import 'package:movies_riverpod/features/notifications/presentation/widget/notification_item.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
+import 'package:movies_riverpod/shared/responsive/responsive.dart';
 
 void notificationBottomSheet(BuildContext context) {
+  double height = MediaQuery.sizeOf(context).height;
+  double width = MediaQuery.sizeOf(context).width;
   showModalBottomSheet<void>(
     context: context,
     isScrollControlled: true,
+    constraints: Responsive.isDesktop(context)
+        ? BoxConstraints(maxHeight: height * 0.85, maxWidth: width * 0.7)
+        : BoxConstraints(),
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
     ),
@@ -16,19 +22,17 @@ void notificationBottomSheet(BuildContext context) {
       return Consumer(
         builder: (context, ref, child) {
           Future(() {
-            ref
-                .read(notificationStateProvider.notifier)
-                .getAllNotifications();
+            ref.read(notificationStateProvider.notifier).getAllNotifications();
           });
           final notificationsNotifier = ref.watch(notificationStateProvider);
           return ClipRRect(
             borderRadius:
                 const BorderRadius.vertical(top: Radius.circular(20.0)),
             child: SizedBox(
-                height: MediaQuery.of(context).size.height * 0.8,
+                height: height * 0.7,
                 child: CustomScrollView(slivers: [
                   SliverToBoxAdapter(
-                    child:  Column(
+                    child: Column(
                       children: [
                         const SizedBox(height: 8),
                         Container(
@@ -46,32 +50,46 @@ void notificationBottomSheet(BuildContext context) {
                             style: context.textTheme.titleMedium,
                           ),
                         ),
-                         Align(
+                        Align(
                           alignment: Alignment.topRight,
                           child: InkWell(
-                            onTap: (){
-                              if(notificationsNotifier.notifications.isNotEmpty){
-                                ref.read(notificationStateProvider.notifier).clearNotifications();
-                              }
-
-                            },
+                              onTap: () {
+                                if (notificationsNotifier
+                                    .notifications.isNotEmpty) {
+                                  ref
+                                      .read(notificationStateProvider.notifier)
+                                      .clearNotifications();
+                                }
+                              },
                               child: Padding(
-                                padding: EdgeInsets.only(top: AppDimensions.p10, right: AppDimensions.p12,bottom: AppDimensions.p12, left: AppDimensions.p12),
-                                child:  Text('Clear All',style: context.textTheme.bodySmall),
+                                padding: EdgeInsets.only(
+                                    top: AppDimensions.p10,
+                                    right: AppDimensions.p12,
+                                    bottom: AppDimensions.p12,
+                                    left: AppDimensions.p12),
+                                child: Text('Clear All',
+                                    style: context.textTheme.bodySmall),
                               )),
                         )
                       ],
                     ),
                   ),
                   notificationsNotifier.notifications.isNotEmpty
-                  ?SliverList(
-                      delegate: SliverChildBuilderDelegate(
-                    (context, index) {
-                      return NotificationItem(notificationModel: notificationsNotifier.notifications[index]);
-                    },
-                    childCount: notificationsNotifier.notifications.length,
-                  ))
-                      :const SliverFillRemaining(child: Center(child: Text('No notification available'),),)
+                      ? SliverList(
+                          delegate: SliverChildBuilderDelegate(
+                          (context, index) {
+                            return NotificationItem(
+                                notificationModel:
+                                    notificationsNotifier.notifications[index]);
+                          },
+                          childCount:
+                              notificationsNotifier.notifications.length,
+                        ))
+                      : const SliverFillRemaining(
+                          child: Center(
+                            child: Text('No notification available'),
+                          ),
+                        )
                 ])),
           );
         },
@@ -79,5 +97,3 @@ void notificationBottomSheet(BuildContext context) {
     },
   );
 }
-
-

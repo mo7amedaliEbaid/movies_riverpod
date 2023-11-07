@@ -4,6 +4,7 @@ import 'package:movies_riverpod/app/app_colors.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
+import 'package:movies_riverpod/shared/responsive/responsive.dart';
 
 class MovieDetailHeader extends StatelessWidget {
   final MovieDetail movieDetail;
@@ -46,7 +47,7 @@ class MovieDetailHeader extends StatelessWidget {
           placeholder: (context, url) =>
               const Center(child: CircularProgressIndicator()),
           errorWidget: (context, url, error) => const Icon(Icons.broken_image),
-          fit: BoxFit.cover,
+          fit: Responsive.isDesktop(context) ? BoxFit.fitHeight : BoxFit.cover,
         ),
       ),
     );
