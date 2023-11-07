@@ -22,13 +22,7 @@ class _MoviesState extends State<Movies> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Responsive.isDesktop(context)
-          ? const CustomAppBar(
-              isDesktop: true,
-            )
-          : const CustomAppBar(
-              isDesktop: false,
-            ),
+      appBar: const CustomAppBar(),
       drawer: const AppDrawer(),
       body: homePageBody(),
       bottomNavigationBar: AppBottomNavigation(
