@@ -6,7 +6,7 @@
 - Riverpod State Management.
 - Dependency injection.
 - Multiple Themes.
-- Responsive Design (Mobile, Desktop).
+- Responsive Design (Mobile [Portarit , Landscape] , Desktop).
 - Bookmarks.
 - Google Maps "Removed for now".
 - Upcoming Screen.
