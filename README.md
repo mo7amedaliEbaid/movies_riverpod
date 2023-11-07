@@ -19,7 +19,7 @@
 
 
 ### Download Apk
-<a href="https://github.com/mo7amedaliEbaid/movies_riverpod/releases/download/v1.0.0/movies-riverpod.apk"><img src="https://playerzon.com/asset/download.png" width="130"></img></a>
+<a href="https://github.com/mo7amedaliEbaid/movies_riverpod/releases/download/v1.0.1/movies-v2.apk"><img src="https://playerzon.com/asset/download.png" width="130"></img></a>
 <br />
 
 
