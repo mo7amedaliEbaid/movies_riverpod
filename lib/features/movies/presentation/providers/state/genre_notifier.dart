@@ -3,7 +3,7 @@ import 'package:movies_riverpod/features/movies/domain/use_cases/fetch_and_cache
 import 'package:movies_riverpod/features/movies/domain/use_cases/fetch_cached_genre_use_case.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/di/Injector.dart';
-import 'package:movies_riverpod/models/genres.dart';
+import 'package:movies_riverpod/models/genres/genres.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
 import 'genre_state.dart';

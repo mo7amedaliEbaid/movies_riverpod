@@ -3,7 +3,7 @@ import 'package:movies_riverpod/features/movie_detail/domain/use_cases/get_casts
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/di/Injector.dart';
 import 'package:movies_riverpod/features/movie_detail/presentation/provider/state/casts_state.dart';
-import 'package:movies_riverpod/models/cast.dart';
+import 'package:movies_riverpod/models/cast/cast.dart';
 import 'package:movies_riverpod/models/response/casts_response.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 

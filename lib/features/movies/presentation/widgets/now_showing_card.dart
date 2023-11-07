@@ -4,9 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 
-import 'package:movies_riverpod/models/movie.dart';
 
 import 'package:movies_riverpod/shared/widgets/rating_bar.dart';
+
+import '../../../../models/movie/movie.dart';
 
 class NowShowingMovieCard extends StatelessWidget {
   final Movie movie;

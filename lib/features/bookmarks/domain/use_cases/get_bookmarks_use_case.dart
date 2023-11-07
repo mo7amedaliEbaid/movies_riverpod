@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:movies_riverpod/features/bookmarks/domain/repositories/bookmark_repository.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
 interface class GetBookmarksUseCase {

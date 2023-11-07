@@ -3,7 +3,7 @@ import 'package:movies_riverpod/features/bookmarks/domain/use_cases/get_bookmark
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/di/Injector.dart';
 import 'package:movies_riverpod/features/bookmarks/presentation/providers/state/bookmark_state.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
 import '../../../../movie_detail/domain/use_cases/remove_bookmark_use_case.dart';

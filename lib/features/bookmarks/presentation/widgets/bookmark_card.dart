@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/features/bookmarks/presentation/providers/bookmark_notifier_provider.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/shared/widgets/rating_bar.dart';
 

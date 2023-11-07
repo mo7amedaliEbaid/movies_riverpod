@@ -6,7 +6,7 @@ import 'package:movies_riverpod/app/app_constants.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/features/movie_detail/presentation/provider/movie_detail_state_notifier.dart';
 import 'package:movies_riverpod/features/movie_detail/presentation/widget/casts_list.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/shared/widgets/genre_chip.dart';
 import 'package:movies_riverpod/shared/widgets/rating_bar.dart';

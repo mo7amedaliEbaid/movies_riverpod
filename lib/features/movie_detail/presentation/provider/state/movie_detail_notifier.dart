@@ -6,7 +6,7 @@ import 'package:movies_riverpod/features/movie_detail/domain/use_cases/remove_bo
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/di/Injector.dart';
 import 'package:movies_riverpod/features/movie_detail/presentation/provider/state/movie_detail_state.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
 interface class MovieDetailNotifier extends StateNotifier<MovieDetailState> {

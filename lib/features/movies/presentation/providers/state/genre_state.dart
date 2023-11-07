@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'package:movies_riverpod/models/genre.dart';
+import 'package:movies_riverpod/models/genre/genre.dart';
 
 enum GenreConcreteState { initial, loading, loaded, failure }
 

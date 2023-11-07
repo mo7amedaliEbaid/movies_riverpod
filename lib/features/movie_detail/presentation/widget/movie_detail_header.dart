@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:movies_riverpod/app/app_colors.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 
 class MovieDetailHeader extends StatelessWidget {
   final MovieDetail movieDetail;

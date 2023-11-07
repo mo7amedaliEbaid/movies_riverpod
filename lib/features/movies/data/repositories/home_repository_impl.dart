@@ -3,12 +3,12 @@ import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/features/movies/data/datasource/local/home_local_datasource.dart';
 import 'package:movies_riverpod/features/movies/data/datasource/remote/home_remote_data_source.dart';
 import 'package:movies_riverpod/features/movies/domain/repositories/home_repository.dart';
-import 'package:movies_riverpod/models/domain/movies.dart';
-import 'package:movies_riverpod/models/genres.dart';
-import 'package:movies_riverpod/models/movie.dart';
+import 'package:movies_riverpod/models/movies/movies.dart';
+import 'package:movies_riverpod/models/genres/genres.dart';
+import 'package:movies_riverpod/models/movie/movie.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 
-import 'package:movies_riverpod/models/genre.dart';
+import 'package:movies_riverpod/models/genre/genre.dart';
 
 interface class HomeRepoImpl extends HomeRepository {
   final HomeRemoteDataSource homeRemoteDataSource;

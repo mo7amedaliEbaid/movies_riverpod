@@ -1,7 +1,7 @@
 import 'package:movies_riverpod/features/notifications/data/models/notification.dart';
-import 'package:movies_riverpod/models/domain/movies.dart';
-import 'package:movies_riverpod/models/genres.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movies/movies.dart';
+import 'package:movies_riverpod/models/genres/genres.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
 

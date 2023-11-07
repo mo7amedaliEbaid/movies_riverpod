@@ -1,4 +1,4 @@
-import 'package:movies_riverpod/models/genre.dart';
+import 'package:movies_riverpod/models/genre/genre.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:isar/isar.dart';
 

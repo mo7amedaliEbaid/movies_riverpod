@@ -1,4 +1,4 @@
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 
 abstract class MovieDetailLocalDataSource {
   Future<int> bookmarkMovie(MovieDetail movieDetail);

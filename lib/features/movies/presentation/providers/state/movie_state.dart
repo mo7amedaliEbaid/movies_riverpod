@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'package:movies_riverpod/models/movie.dart';
+import 'package:movies_riverpod/models/movie/movie.dart';
 
 enum MoviesConcreteState {
   initial,

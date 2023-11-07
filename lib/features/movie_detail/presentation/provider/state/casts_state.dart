@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:movies_riverpod/models/cast.dart';
+import 'package:movies_riverpod/models/cast/cast.dart';
 
 enum CastConcreteState { initial, loading, loaded, failure }
 

@@ -6,12 +6,12 @@ import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/app/app_text_styles.dart';
 import 'package:movies_riverpod/features/movies/presentation/providers/movies_state_notifier_provider.dart';
-import 'package:movies_riverpod/models/movie.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/shared/widgets/genre_chip.dart';
 
 import 'package:movies_riverpod/shared/widgets/rating_bar.dart';
 
+import '../../../../models/movie/movie.dart';
 import '../providers/state/genre_state.dart';
 
 class UpcomingMovie extends ConsumerWidget {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies_riverpod/app/app_configs.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
-import 'package:movies_riverpod/models/cast.dart';
+import 'package:movies_riverpod/models/cast/cast.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 
 class CastItem extends StatelessWidget {

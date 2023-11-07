@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:movies_riverpod/features/movie_detail/data/datasource/local/movie_detail_local_datasource.dart';
 import 'package:movies_riverpod/features/movie_detail/data/datasource/remote/movie_detail_remote_datasource.dart';
 import 'package:movies_riverpod/features/movie_detail/domain/repositories/movie_detail_repository.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/models/response/casts_response.dart';
 
 import 'package:movies_riverpod/shared/util/app_exception.dart';

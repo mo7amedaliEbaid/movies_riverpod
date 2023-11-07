@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:movies_riverpod/features/bookmarks/data/datasource/local/bookmark_local_datasource.dart';
 import 'package:movies_riverpod/features/notifications/data/models/notification.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/shared/local/cache/local_db.dart';
 import 'package:movies_riverpod/shared/util/app_exception.dart';
 import 'package:isar/isar.dart';

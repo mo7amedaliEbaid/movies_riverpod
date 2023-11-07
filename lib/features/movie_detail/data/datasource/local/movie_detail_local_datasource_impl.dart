@@ -1,6 +1,6 @@
 import 'package:movies_riverpod/features/movie_detail/data/datasource/local/movie_detail_local_datasource.dart';
 import 'package:movies_riverpod/features/notifications/data/models/notification.dart';
-import 'package:movies_riverpod/models/movie_detail.dart';
+import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/shared/local/cache/local_db.dart';
 import 'package:isar/isar.dart';
 
