@@ -53,6 +53,8 @@ dependencies:
   get_it:
   isar_flutter_libs:
 #  google_maps_flutter:
+#  google_maps_webservice:
+#  http:
 
 dev_dependencies:
   flutter_test:
