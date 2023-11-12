@@ -9,7 +9,8 @@
 - Responsive Design (Mobile [Portarit , Landscape] , Desktop).
 - Bookmarks.
 - Google Maps "Removed for now".
-- Upcoming Screen.
+- Upcoming Movies Screen.
+- Trending Movies Screen
 - Home Screen.
 - Movie Details Screen.
 - Now Showing movies.
@@ -44,6 +45,8 @@
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/506512b215ce53524989d541f26c30d4566a0a89/screenshots/portrait/upcom_dark.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/506512b215ce53524989d541f26c30d4566a0a89/screenshots/portrait/upcom_light.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/506512b215ce53524989d541f26c30d4566a0a89/screenshots/portrait/notidark.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/704fad6542c9461999dda1a3727eaad0749f4436/screenshots/portrait/trending.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/704fad6542c9461999dda1a3727eaad0749f4436/screenshots/portrait/trendingdark.jpg" width="170" />
 </p>
 
 ##### Landscape.
