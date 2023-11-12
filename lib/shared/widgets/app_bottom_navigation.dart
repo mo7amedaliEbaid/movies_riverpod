@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movies_riverpod/app/app_text_styles.dart';
 
+import '../../app/app_strings.dart';
+
 class AppBottomNavigation extends StatelessWidget {
   final int currentIndex;
 
@@ -13,15 +15,21 @@ class AppBottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
       onTap: (index) => onTapped(index),
       currentIndex: currentIndex,
       selectedLabelStyle:
           AppTextStyles.bodyMedium.copyWith(fontWeight: FontWeight.bold),
       unselectedLabelStyle: AppTextStyles.bodySmall,
       items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(icon: Icon(Icons.movie), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.upcoming), label: 'Upcoming'),
-        BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: 'Bookmarks')
+        BottomNavigationBarItem(
+            icon: Icon(Icons.movie), label: AppStrings.home),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.upcoming), label: AppStrings.upcoming),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.trending_up), label: AppStrings.trending),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.bookmark), label: AppStrings.bookmarks)
       ],
     );
   }

@@ -16,6 +16,10 @@ final upcomingMoviesStateNotifier =
 AutoDisposeStateNotifierProvider<MovieNotifier, MovieState>(
         (ref) => MovieNotifier());
 
+final trendingMoviesStateNotifier =
+AutoDisposeStateNotifierProvider<MovieNotifier, MovieState>(
+        (ref) => MovieNotifier());
+
 final genreStateNotifier =
 AutoDisposeStateNotifierProvider<GenreNotifier, GenreState>(
         (ref) => GenreNotifier()..getGenres());

@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:movies_riverpod/features/bookmarks/presentation/screens/bookmark_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/home_screen.dart';
+import 'package:movies_riverpod/features/movies/presentation/screens/trending_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/upcoming_screen.dart';
 import 'package:movies_riverpod/shared/responsive/responsive.dart';
 import 'package:movies_riverpod/shared/widgets/app_bar.dart';
@@ -46,6 +47,8 @@ class _MoviesState extends State<Movies> {
       case 1:
         return const UpcomingScreen();
       case 2:
+        return const TrendingScreen();
+      case 3:
         return const BookmarkScreen();
       default:
         return Container();

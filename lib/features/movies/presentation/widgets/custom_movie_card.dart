@@ -14,10 +14,10 @@ import 'package:movies_riverpod/shared/widgets/rating_bar.dart';
 import '../../../../models/movie/movie.dart';
 import '../providers/state/genre_state.dart';
 
-class UpcomingMovie extends ConsumerWidget {
+class CustomMovieCard extends ConsumerWidget {
   final Movie movie;
 
-  const UpcomingMovie({Key? key, required this.movie}) : super(key: key);
+  const CustomMovieCard({Key? key, required this.movie}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

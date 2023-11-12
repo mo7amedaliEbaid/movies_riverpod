@@ -8,18 +8,18 @@ import 'package:movies_riverpod/features/movies/presentation/widgets/custom_movi
 import 'package:movies_riverpod/routes/app_router.dart';
 import 'package:go_router/go_router.dart';
 
-class UpcomingMovies extends ConsumerWidget {
-  const UpcomingMovies({super.key});
+class TrendingMovies extends ConsumerWidget {
+  const TrendingMovies({super.key});
 
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final upcomingMoviesState = ref.watch(upcomingMoviesStateNotifier);
-    return upcomingMoviesState.hasData
+    final trendingMoviesState = ref.watch(trendingMoviesStateNotifier);
+    return trendingMoviesState.hasData
         ? SliverList(
         delegate: SliverChildBuilderDelegate((context, index) {
-          if (index < upcomingMoviesState.movies.length) {
-            final movie = upcomingMoviesState.movies[index];
+          if (index < trendingMoviesState.movies.length) {
+            final movie = trendingMoviesState.movies[index];
             return GestureDetector(
                 onTap: () {
                   context.pushNamed(Routes.movieDetail.name,
@@ -30,7 +30,7 @@ class UpcomingMovies extends ConsumerWidget {
           else {
             return const Center(child: CircularProgressIndicator());
           }
-        }, childCount: upcomingMoviesState.movies.length + 1))
+        }, childCount: trendingMoviesState.movies.length + 1))
         : const SliverFillRemaining(hasScrollBody: true,child: MoviesVerticalListShimmer());
   }
 }
