@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/core/observers.dart';
-
 import 'core/app.dart';
 import 'di/Injector.dart' ;
 
+
+
 Future<void> main() async{
+
 
   WidgetsFlutterBinding.ensureInitialized();
 

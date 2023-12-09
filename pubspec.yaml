@@ -52,6 +52,7 @@ dependencies:
   isar:
   get_it:
   isar_flutter_libs:
+#  window_manager:
 #  google_maps_flutter:
 #  google_maps_webservice:
 #  http:

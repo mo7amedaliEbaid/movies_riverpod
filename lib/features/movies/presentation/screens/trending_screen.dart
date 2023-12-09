@@ -6,7 +6,7 @@ import 'package:movies_riverpod/features/movies/presentation/providers/movies_st
 import 'package:movies_riverpod/features/movies/presentation/widgets/custom_screen_title.dart';
 import 'package:movies_riverpod/features/movies/presentation/widgets/trending_movies.dart';
 
-import 'package:movies_riverpod/features/movies/presentation/widgets/upcomig_movies.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/mobile_upcomig_movies.dart';
 import 'package:movies_riverpod/shared/network/network_values.dart';
 
 class TrendingScreen extends ConsumerStatefulWidget {
@@ -54,7 +54,7 @@ class _TrendingScreenState extends ConsumerState<TrendingScreen> {
             children: [CustomScreenTtle(screentitle: AppStrings.trending)],
           ),
         ),
-        const TrendingMovies()
+        TrendingMovies()
       ]),
     );
   }

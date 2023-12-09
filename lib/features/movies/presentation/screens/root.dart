@@ -5,19 +5,17 @@ import 'package:movies_riverpod/features/bookmarks/presentation/screens/bookmark
 import 'package:movies_riverpod/features/movies/presentation/screens/home_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/trending_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/upcoming_screen.dart';
-import 'package:movies_riverpod/shared/responsive/responsive.dart';
 import 'package:movies_riverpod/shared/widgets/app_bar.dart';
 import 'package:movies_riverpod/shared/widgets/app_bottom_navigation.dart';
 import 'package:movies_riverpod/shared/widgets/app_drawer.dart';
-
-class Movies extends StatefulWidget {
-  const Movies({Key? key}) : super(key: key);
+class Root extends StatefulWidget {
+  const Root({Key? key}) : super(key: key);
 
   @override
-  State<Movies> createState() => _MoviesState();
+  State<Root> createState() => _RootState();
 }
 
-class _MoviesState extends State<Movies> {
+class _RootState extends State<Root> {
   int _currentIndex = 0;
 
   @override
@@ -35,7 +33,7 @@ class _MoviesState extends State<Movies> {
 
   void _onTabTapped(int index) {
     setState(() {
-      log('index $index');
+   //   log('index $index');
       _currentIndex = index;
     });
   }

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
@@ -18,23 +20,32 @@ class NowShowingMovies extends ConsumerWidget {
     return SizedBox(
       height: AppDimensions.nowShowingCardHeight,
       child: nowShowingMoviesState.hasData
-          ? ListView.builder(
-              controller: scrollController,
-              scrollDirection: Axis.horizontal,
-              itemCount: nowShowingMoviesState.movies.length + 1,
-              itemBuilder: (context, index) {
-                if (index < nowShowingMoviesState.movies.length) {
-                  final movie = nowShowingMoviesState.movies[index];
-                  return GestureDetector(
-                      onTap: () {
-                        context.pushNamed(Routes.movieDetail.name,
-                            extra: movie.id);
-                      },
-                      child: NowShowingMovieCard(movie: movie));
-                } else {
-                  return const Center(child: CircularProgressIndicator());
-                }
-              },
+          ? ScrollConfiguration(
+              behavior: ScrollConfiguration.of(context).copyWith(
+                dragDevices: {
+                  PointerDeviceKind.touch,
+                  PointerDeviceKind.mouse,
+                },
+              ),
+              child: ListView.builder(
+                controller: scrollController,
+                scrollDirection: Axis.horizontal,
+                physics: const AlwaysScrollableScrollPhysics(),
+                itemCount: nowShowingMoviesState.movies.length + 1,
+                itemBuilder: (context, index) {
+                  if (index < nowShowingMoviesState.movies.length) {
+                    final movie = nowShowingMoviesState.movies[index];
+                    return GestureDetector(
+                        onTap: () {
+                          context.pushNamed(Routes.movieDetail.name,
+                              extra: movie.id);
+                        },
+                        child: NowShowingMovieCard(movie: movie));
+                  } else {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                },
+              ),
             )
           : const NowShowingMoviesShimmer(),
     );

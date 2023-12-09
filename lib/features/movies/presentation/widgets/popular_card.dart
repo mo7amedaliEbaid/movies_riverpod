@@ -22,6 +22,7 @@ class PopularMovie extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final genreState = ref.watch(genreStateNotifier);
     return Container(
+      width: 450,
       padding: EdgeInsets.only(top: AppDimensions.p8, left: AppDimensions.p18, right: AppDimensions.p18),
       child: Row(
         children: [

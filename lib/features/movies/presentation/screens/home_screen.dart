@@ -3,10 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/app/app_dimensions.dart';
 import 'package:movies_riverpod/app/app_strings.dart';
 import 'package:movies_riverpod/features/movies/presentation/providers/movies_state_notifier_provider.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/desktop_popular_movies.dart';
 import 'package:movies_riverpod/features/movies/presentation/widgets/now_showing_movies.dart';
-import 'package:movies_riverpod/features/movies/presentation/widgets/popular_movies.dart';
+import 'package:movies_riverpod/features/movies/presentation/widgets/mobile_popular_movies.dart';
 import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/shared/network/network_values.dart';
+import 'package:movies_riverpod/shared/responsive/responsive.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -91,7 +93,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ),
           ],
         )),
-        const PopularMovies()
+        Responsive.isDesktop(context)
+            ? const SliverToBoxAdapter(
+                child: DeskTopPopularMovies(),
+              )
+            : const MobilePopularMovies()
       ]),
     );
   }

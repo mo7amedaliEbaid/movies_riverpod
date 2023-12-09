@@ -17,6 +17,7 @@ class AppBottomNavigation extends StatelessWidget {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       onTap: (index) => onTapped(index),
+      selectedItemColor: Colors.amber.shade700,
       currentIndex: currentIndex,
       selectedLabelStyle:
           AppTextStyles.bodyMedium.copyWith(fontWeight: FontWeight.bold),
