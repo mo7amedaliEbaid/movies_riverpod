@@ -59,11 +59,11 @@
 #### Desktop "Linux".
 
 <p float="left">
-   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/16a9fd3525e8989ea9bbc2ba4604d89ed503e0b3/screenshots/desktop/home.png" width="670" />
-<img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/cebdef12494b7a57696a48c4b3a6633e5d7d2f30/screenshots/desktop/notifications.png" width="670" />
-   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/16a9fd3525e8989ea9bbc2ba4604d89ed503e0b3/screenshots/desktop/upcoming.png" width="670" />
-   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/16a9fd3525e8989ea9bbc2ba4604d89ed503e0b3/screenshots/desktop/details.png" width="670" />
-   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/16a9fd3525e8989ea9bbc2ba4604d89ed503e0b3/screenshots/desktop/dark2.png" width="670" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk1.png" width="670" />
+<img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk.png" width="670" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk2.png" width="670" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk6.png" width="670" />
+   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk5.png" width="670" />
 </p>
 
 
