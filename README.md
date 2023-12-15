@@ -9,21 +9,55 @@ https://github.com/mo7amedaliEbaid/movies_riverpod/assets/131966482/e6e4c60f-1ba
 
 
 # movies_riverpod
- 
-- Flutter MultiPlatform Movies App.
-- It's been successfully tested on Mobile (Android, Ios), and Desktop(Linux).
-- Clean Architecture.
-- Riverpod State Management.
-- Dependency injection.
-- Multiple Themes.
-- Responsive Design (Mobile [Portarit , Landscape] , Desktop).
-- Bookmarks.
-- Google Maps "Removed for now".
-- Upcoming Movies Screen.
-- Trending Movies Screen
-- Home Screen.
-- Movie Details Screen.
-- Now Showing movies.
+
+ movies_riverpod is a versatile Flutter app designed for seamless movie exploration across different platforms. The app follows a Clean Architecture pattern, ensuring a modular and maintainable codebase. It has been successfully tested on mobile platforms (Android, iOS) and desktop (Linux).
+
+## Features
+
+- **Multiplatform Compatibility:** Enjoy a consistent experience on mobile (both portrait and landscape) and desktop (Linux).
+
+- **State Management with Riverpod:** Leverage Riverpod for efficient and scalable state management.
+
+- **Dependency Injection:** Implement dependency injection for better code organization and testability.
+
+- **Multiple Themes:** Choose from a variety of themes to customize the app's appearance according to your preferences.
+
+- **Responsive Design:** Experience responsive design that adapts to different screen orientations on mobile and desktop.
+
+- **Bookmarks:** Save your favorite movies for quick access and reference.
+
+- **Upcoming Movies Screen:** Stay informed about the latest upcoming releases.
+
+- **Trending Movies Screen:** Explore the current trending movies in the app.
+
+- **Home Screen:** Navigate seamlessly through the app's main screen for a user-friendly experience.
+
+- **Movie Details Screen:** Get detailed information about each movie, enhancing your viewing experience.
+
+- **Now Showing Movies:** Stay updated on movies currently being screened.
+
+## Dependencies
+The project utilizes a range of dependencies to enhance functionality and streamline development. Some key dependencies include:
+
+- **flutter_riverpod:** State management library for Flutter.
+- **dio:** HTTP client for making network requests.
+- **flutter_svg:** SVG rendering library for Flutter.
+- **freezed:** Code generation for immutable classes.
+- **flutter_screenutil:** Screen adaptation utility for responsive design.
+- **go_router:** Routing library for Flutter.
+- **shimmer:** Loading animation library for a polished UI.
+- **cached_network_image:** Caching library for network images.
+- **shared_preferences:** Local storage for persisting simple data.
+- **isar:** High-performance, easy-to-use NoSQL database for Flutter.
+- **get_it:** Simple service locator for dependency injection.
+
+## Development Dependencies
+Key development dependencies include:
+
+- **build_runner:** Code generation tool for Flutter.
+- **json_serializable:** JSON serialization/deserialization for Dart objects.
+- **isar_generator:** Code generation for Isar database.
+- **auto_route_generator:** Code generation for routing with auto_route.
 
 ## Demo Video
 
