@@ -1,7 +1,10 @@
 
 
 
-https://github.com/mo7amedaliEbaid/movies_riverpod/assets/131966482/d57fc242-e3f6-4faa-8517-d047d67590b0
+
+https://github.com/mo7amedaliEbaid/movies_riverpod/assets/131966482/e6e4c60f-1ba1-43fd-8b2c-31aea4451299
+
+
 
 
 
