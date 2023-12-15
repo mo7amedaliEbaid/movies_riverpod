@@ -4,11 +4,11 @@
 
 ## Directory Structure.
 
-📁 **core:** Houses fundamental components essential for the application, such as the main app configuration (`app.dart`), error handling (`observers.dart`), extensions, constants, and other core functionalities.
+📁 **core:** Houses fundamental components and shared files essential for the application, such as the main app configuration (`app.dart`), error handling (`observers.dart`), extensions, constants, and other core functionalities.
 
 📁 **di (Dependency Injection):** Manages the dependency injection logic for improved code organization and testability. The `injector.dart` file resides here.
 
-📁 **features:** Organized into three subdirectories: `data` for data-related logic and repositories, `domain` for domain entities and use cases, and `presentation` for UI screens and widgets. This follows a clean architecture approach, promoting separation of concerns.
+📁 **features:** Organized into three subdirectories: `data` for data-related logic and repositories, `domain` for the use cases, and `presentation` for UI screens and widgets. This follows a clean architecture approach, promoting separation of concerns.
 
 📁 **models:** Contains the data models used throughout the application, such as `movies.dart` and `casts.dart`.
 
