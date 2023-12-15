@@ -74,7 +74,6 @@ https://github.com/mo7amedaliEbaid/movies_riverpod/assets/131966482/e6e4c60f-1ba
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk2.png" width="670" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk6.png" width="670" />
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk5.png" width="670" />
-   <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/46c4fcb02b55b9c9952ee43c9b1a0824bd8b96e1/screenshots/desktop/desk7.png" width="670" />
 </p>
 
 
