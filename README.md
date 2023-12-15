@@ -1,18 +1,26 @@
+# movies_riverpod
 
+ movies_riverpod is a versatile Flutter app designed for seamless movie exploration across different platforms. The app follows a Clean Architecture pattern, ensuring a modular and maintainable codebase. It has been successfully tested on mobile platforms (Android, iOS) and desktop (Linux).
 
+## Directory Structure.
+
+📁 **core:** Houses fundamental components essential for the application, such as the main app configuration (`app.dart`), error handling (`observers.dart`), extensions, constants, and other core functionalities.
+
+📁 **di (Dependency Injection):** Manages the dependency injection logic for improved code organization and testability. The `injector.dart` file resides here.
+
+📁 **features:** Organized into three subdirectories: `data` for data-related logic and repositories, `domain` for domain entities and use cases, and `presentation` for UI screens and widgets. This follows a clean architecture approach, promoting separation of concerns.
+
+📁 **models:** Contains the data models used throughout the application, such as `movies.dart` and `casts.dart`.
+
+📄 **main.dart:** The entry point of the application, where the execution begins. It imports and initializes necessary components to kickstart the Flutter app.
 
 
 https://github.com/mo7amedaliEbaid/movies_riverpod/assets/131966482/e6e4c60f-1ba1-43fd-8b2c-31aea4451299
 
 
-
-
-
-# movies_riverpod
-
- movies_riverpod is a versatile Flutter app designed for seamless movie exploration across different platforms. The app follows a Clean Architecture pattern, ensuring a modular and maintainable codebase. It has been successfully tested on mobile platforms (Android, iOS) and desktop (Linux).
-
 ## Features
+
+- **Clean Architecture:** The project adheres to Clean Architecture principles, promoting separation of concerns and maintainability.
 
 - **Multiplatform Compatibility:** Enjoy a consistent experience on mobile (both portrait and landscape) and desktop (Linux).
 
@@ -35,6 +43,8 @@ https://github.com/mo7amedaliEbaid/movies_riverpod/assets/131966482/e6e4c60f-1ba
 - **Movie Details Screen:** Get detailed information about each movie, enhancing your viewing experience.
 
 - **Now Showing Movies:** Stay updated on movies currently being screened.
+
+- **Track Your Activity:** Utilize the "Notifications" feature to keep a record of your interactions within the app.
 
 ## Dependencies
 The project utilizes a range of dependencies to enhance functionality and streamline development. Some key dependencies include:
@@ -110,6 +120,11 @@ Key development dependencies include:
    <img src="https://github.com/mo7amedaliEbaid/movies_riverpod/blob/72d21e9e3abd2bce283c60d1291014a6a76b86e7/screenshots/desktop/desk5.png" width="670" />
 </p>
 
+### Getting Started
+To get started with the project, follow these steps:
 
+- Clone the repository.
+- Install dependencies using flutter pub get.
+- Run the app on your preferred platform using flutter run.
 
 
