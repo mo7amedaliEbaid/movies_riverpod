@@ -7,8 +7,7 @@ import 'package:movies_riverpod/features/notifications/presentation/widget/notif
 import '../../../../core/app/app_dimensions.dart';
 import '../../../../core/responsive/responsive.dart';
 
-/*
-void notificationBottomSheet(BuildContext context) {
+void mobileNotificationBottomSheet(BuildContext context) {
   double height = MediaQuery.sizeOf(context).height;
   double width = MediaQuery.sizeOf(context).width;
   showModalBottomSheet<void>(
@@ -99,9 +98,8 @@ void notificationBottomSheet(BuildContext context) {
     },
   );
 }
-*/
-void notificationSideSheet(BuildContext context) {
-  double height = MediaQuery.sizeOf(context).height;
+void desktopNotificationSideSheet(BuildContext context) {
+ // double height = MediaQuery.sizeOf(context).height;
   double width = MediaQuery.sizeOf(context).width;
   showGeneralDialog(
     context: context,
