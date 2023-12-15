@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
 import 'package:movies_riverpod/models/response/casts_response.dart';
-import 'package:movies_riverpod/shared/util/app_exception.dart';
+
+import '../../../../../core/util/app_exception.dart';
 
 abstract class MovieDetailRemoteDataSource {
   Future<Either<AppException, MovieDetail>> getMovie({required int id});

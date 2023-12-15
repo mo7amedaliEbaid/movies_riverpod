@@ -4,8 +4,8 @@ import 'package:movies_riverpod/features/movies/domain/use_cases/fetch_cached_ge
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/di/Injector.dart';
 import 'package:movies_riverpod/models/genres/genres.dart';
-import 'package:movies_riverpod/shared/util/app_exception.dart';
 
+import '../../../../../core/util/app_exception.dart';
 import 'genre_state.dart';
 
 interface class GenreNotifier extends StateNotifier<GenreState> {

@@ -4,8 +4,9 @@ import 'package:movies_riverpod/features/movies/presentation/providers/movies_st
 
 
 import 'package:movies_riverpod/features/movies/presentation/widgets/custom_movie_card.dart';
-import 'package:movies_riverpod/routes/app_router.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../core/routes/app_router.dart';
 
 class DesktopUpcomingMovies extends ConsumerWidget {
   const DesktopUpcomingMovies({super.key});

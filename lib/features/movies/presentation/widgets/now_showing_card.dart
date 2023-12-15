@@ -1,12 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:movies_riverpod/app/app_configs.dart';
-import 'package:movies_riverpod/app/app_dimensions.dart';
 
-
-import 'package:movies_riverpod/shared/widgets/rating_bar.dart';
-
+import '../../../../core/app/app_configs.dart';
+import '../../../../core/app/app_dimensions.dart';
+import '../../../../core/widgets/rating_bar.dart';
 import '../../../../models/movie/movie.dart';
 
 class NowShowingMovieCard extends StatelessWidget {

@@ -3,8 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/features/movies/presentation/providers/movies_state_notifier_provider.dart';
 
 import 'package:movies_riverpod/features/movies/presentation/widgets/popular_card.dart';
-import 'package:movies_riverpod/routes/app_router.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../core/routes/app_router.dart';
 
 class DeskTopPopularMovies extends ConsumerWidget {
   const DeskTopPopularMovies({super.key});

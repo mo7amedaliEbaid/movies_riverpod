@@ -3,12 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:movies_riverpod/app/app_configs.dart';
-import 'package:movies_riverpod/app/app_dimensions.dart';
+import 'package:movies_riverpod/core/extensions/build_context_extensions.dart';
+
 import 'package:movies_riverpod/features/bookmarks/presentation/providers/bookmark_notifier_provider.dart';
 import 'package:movies_riverpod/models/movie_details/movie_detail.dart';
-import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
-import 'package:movies_riverpod/shared/widgets/rating_bar.dart';
+
+import '../../../../core/app/app_configs.dart';
+import '../../../../core/app/app_dimensions.dart';
+import '../../../../core/widgets/rating_bar.dart';
+
 
 
 class BookmarkCard extends StatelessWidget {

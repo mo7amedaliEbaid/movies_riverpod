@@ -1,15 +1,14 @@
-
 import 'package:movies_riverpod/features/bookmarks/data/datasource/local/bookmark_local_datasource.dart';
 import 'package:movies_riverpod/features/bookmarks/data/datasource/local/bookmark_local_datasource_impl.dart';
 import 'package:movies_riverpod/features/bookmarks/domain/repositories/bookmark_repository.dart';
 import 'package:movies_riverpod/features/bookmarks/data/repositories/bookmark_repository_impl.dart';
 import 'package:movies_riverpod/features/bookmarks/domain/use_cases/get_bookmarks_use_case.dart';
-import 'package:movies_riverpod/features/movies/data/datasource/local/home_local_datasource.dart';
-import 'package:movies_riverpod/features/movies/data/datasource/local/home_local_datasource_impl.dart';
-import 'package:movies_riverpod/features/movies/data/datasource/remote/home_remote_data_source.dart';
-import 'package:movies_riverpod/features/movies/data/datasource/remote/home_remote_datasource.dart';
-import 'package:movies_riverpod/features/movies/domain/repositories/home_repository.dart';
-import 'package:movies_riverpod/features/movies/data/repositories/home_repository_impl.dart';
+import 'package:movies_riverpod/features/movies/data/datasource/local/movies_local_datasource.dart';
+import 'package:movies_riverpod/features/movies/data/datasource/local/movies_local_datasource_impl.dart';
+import 'package:movies_riverpod/features/movies/data/datasource/remote/movies_remote_data_source.dart';
+import 'package:movies_riverpod/features/movies/data/datasource/remote/movies_remote_datasource.dart';
+import 'package:movies_riverpod/features/movies/domain/repositories/movies_repository.dart';
+import 'package:movies_riverpod/features/movies/data/repositories/movies_repository_impl.dart';
 import 'package:movies_riverpod/features/movies/domain/use_cases/fetch_and_cache_genre_use_case.dart';
 import 'package:movies_riverpod/features/movies/domain/use_cases/fetch_and_cache_movies_use_case.dart';
 import 'package:movies_riverpod/features/movies/domain/use_cases/fetch_cached_genre_use_case.dart';
@@ -29,14 +28,14 @@ import 'package:movies_riverpod/features/notifications/data/datasource/local/not
 import 'package:movies_riverpod/features/notifications/domain/repository/notifications_repository.dart';
 import 'package:movies_riverpod/features/notifications/data/repository/notifications_repository_impl.dart';
 import 'package:movies_riverpod/features/notifications/domain/use_cases/clear_all_notifications_use_case.dart';
-import 'package:movies_riverpod/shared/local/cache/local_db.dart';
-import 'package:movies_riverpod/shared/local/cache/local_db_impl.dart';
-import 'package:movies_riverpod/shared/local/shared_prefs/shared_pref.dart';
-import 'package:movies_riverpod/shared/local/shared_prefs/shared_pref_impl.dart';
-import 'package:movies_riverpod/shared/network/dio_network_service.dart';
-import 'package:movies_riverpod/shared/network/network_service.dart';
 import 'package:get_it/get_it.dart';
 
+import '../core/local/cache/local_db.dart';
+import '../core/local/cache/local_db_impl.dart';
+import '../core/local/shared_prefs/shared_pref.dart';
+import '../core/local/shared_prefs/shared_pref_impl.dart';
+import '../core/network/dio_network_service.dart';
+import '../core/network/network_service.dart';
 import '../features/movie_detail/domain/use_cases/remove_bookmark_use_case.dart';
 import '../features/notifications/domain/use_cases/get_all_notifications_use_case.dart';
 
@@ -54,10 +53,10 @@ Future<void> initSingletons() async {
 
 void provideDataSources() {
   //Home
-  injector.registerFactory<HomeLocalDataSource>(
-      () => HomeLocalDataSourceImpl(localDb: injector.get<LocalDb>()));
-  injector.registerFactory<HomeRemoteDataSource>(() =>
-      HomeRemoteDataSourceImpl(networkService: injector.get<NetworkService>()));
+  injector.registerFactory<MoviesLocalDataSource>(
+      () => MoviesLocalDataSourceImpl(localDb: injector.get<LocalDb>()));
+  injector.registerFactory<MoviesRemoteDataSource>(() =>
+      MoviesRemoteDataSourceImpl(networkService: injector.get<NetworkService>()));
 
   //MovieDetail
   injector.registerFactory<MovieDetailRemoteDataSource>(() =>
@@ -77,40 +76,37 @@ void provideDataSources() {
 
 void provideRepositories() {
   //home
-  injector.registerFactory<HomeRepository>(() => HomeRepoImpl(
-      homeRemoteDataSource: injector.get<HomeRemoteDataSource>(),
-      homeLocalDataSource: injector.get<HomeLocalDataSource>()));
+  injector.registerFactory<MoviesRepository>(() => MoviesRepoImpl(
+      moviesRemoteDataSource: injector.get<MoviesRemoteDataSource>(),
+      moviesLocalDataSource: injector.get<MoviesLocalDataSource>()));
 
   //MovieDetail
-  injector.registerFactory<MovieDetailRepository>(() =>
-      MovieDetailRepoImpl(
-          movieDetailDataSource: injector.get<MovieDetailRemoteDataSource>(),
-          movieDetailLocalDataSource:
-              injector.get<MovieDetailLocalDataSource>()));
+  injector.registerFactory<MovieDetailRepository>(() => MovieDetailRepoImpl(
+      movieDetailDataSource: injector.get<MovieDetailRemoteDataSource>(),
+      movieDetailLocalDataSource: injector.get<MovieDetailLocalDataSource>()));
 
   //Bookmark
   injector.registerFactory<BookmarkRepository>(() => BookmarkRepositoryImpl(
       bookmarkLocalDataSource: injector.get<BookmarkLocalDataSource>()));
 
   //Notification
-  injector.registerFactory<NotificationRepository>(() =>
-      NotificationRepoImpl(
-          notificationsLocalDataSource:
-              injector.get<NotificationsLocalDataSource>()));
+  injector.registerFactory<NotificationRepository>(() => NotificationRepoImpl(
+      notificationsLocalDataSource:
+          injector.get<NotificationsLocalDataSource>()));
 }
 
 void provideUseCases() {
   //home
   injector.registerFactory<FetchAndCacheGenreUseCase>(() =>
       FetchAndCacheGenreUseCase(
-          homeRepository: injector.get<HomeRepository>()));
+          homeRepository: injector.get<MoviesRepository>()));
   injector.registerFactory<FetchAndCacheMoviesUseCase>(() =>
       FetchAndCacheMoviesUseCase(
-          homeRepository: injector.get<HomeRepository>()));
+          homeRepository: injector.get<MoviesRepository>()));
   injector.registerFactory<FetchCacheGenresUseCase>(() =>
-      FetchCacheGenresUseCase(homeRepository: injector.get<HomeRepository>()));
+      FetchCacheGenresUseCase(homeRepository: injector.get<MoviesRepository>()));
   injector.registerFactory<FetchCachedMoviesUseCase>(() =>
-      FetchCachedMoviesUseCase(homeRepository: injector.get<HomeRepository>()));
+      FetchCachedMoviesUseCase(homeRepository: injector.get<MoviesRepository>()));
 
   //MovieDetail
   injector.registerFactory<AddBookmarkUseCase>(() => AddBookmarkUseCase(

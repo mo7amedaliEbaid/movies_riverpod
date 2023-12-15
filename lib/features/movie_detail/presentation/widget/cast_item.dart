@@ -1,10 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:movies_riverpod/app/app_configs.dart';
-import 'package:movies_riverpod/app/app_dimensions.dart';
+import 'package:movies_riverpod/core/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/models/cast/cast.dart';
-import 'package:movies_riverpod/shared/extensions/build_context_extensions.dart';
+
+import '../../../../core/app/app_configs.dart';
+import '../../../../core/app/app_dimensions.dart';
 
 class CastItem extends StatelessWidget {
   final Cast cast;

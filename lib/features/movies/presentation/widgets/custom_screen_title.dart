@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../app/app_dimensions.dart';
+import '../../../../core/app/app_dimensions.dart';
 
 class CustomScreenTtle extends StatelessWidget {
   const CustomScreenTtle({super.key, required this.screentitle});

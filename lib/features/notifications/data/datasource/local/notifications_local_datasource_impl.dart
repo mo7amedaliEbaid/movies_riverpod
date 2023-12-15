@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 
 import 'package:movies_riverpod/features/notifications/data/models/notification.dart';
-import 'package:movies_riverpod/shared/local/cache/local_db.dart';
 
-import 'package:movies_riverpod/shared/util/app_exception.dart';
 import 'package:isar/isar.dart';
 
+import '../../../../../core/local/cache/local_db.dart';
+import '../../../../../core/util/app_exception.dart';
 import 'notifications_local_datasource.dart';
 
 interface class NotificationsLocalDataSourceImpl extends NotificationsLocalDataSource {

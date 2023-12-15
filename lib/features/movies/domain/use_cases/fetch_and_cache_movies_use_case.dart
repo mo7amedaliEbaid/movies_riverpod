@@ -1,10 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:movies_riverpod/features/movies/domain/repositories/home_repository.dart';
+import 'package:movies_riverpod/features/movies/domain/repositories/movies_repository.dart';
 import 'package:movies_riverpod/models/movies/movies.dart';
-import 'package:movies_riverpod/shared/util/app_exception.dart';
+
+import '../../../../core/util/app_exception.dart';
 
 interface class FetchAndCacheMoviesUseCase {
-  final HomeRepository homeRepository;
+  final MoviesRepository homeRepository;
 
   FetchAndCacheMoviesUseCase({required this.homeRepository});
 

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:movies_riverpod/app/app_strings.dart';
 import 'package:movies_riverpod/features/movies/presentation/providers/movies_state_notifier_provider.dart';
 import 'package:movies_riverpod/features/movies/presentation/widgets/custom_screen_title.dart';
 import 'package:movies_riverpod/features/movies/presentation/widgets/desktop_upcoming_movies.dart';
 import 'package:movies_riverpod/features/movies/presentation/widgets/mobile_upcomig_movies.dart';
-import 'package:movies_riverpod/shared/network/network_values.dart';
-import 'package:movies_riverpod/shared/responsive/responsive.dart';
+
+import '../../../../core/app/app_strings.dart';
+import '../../../../core/network/network_values.dart';
+import '../../../../core/responsive/responsive.dart';
+
 
 class UpcomingScreen extends ConsumerStatefulWidget {
   const UpcomingScreen({super.key});

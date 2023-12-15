@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movies_riverpod/app/app_dimensions.dart';
-import 'package:movies_riverpod/shared/widgets/shimmers/skeleton.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../../../../../core/app/app_dimensions.dart';
+import '../../../../../core/widgets/shimmers/skeleton.dart';
 
 class NowShowingMoviesShimmer extends StatelessWidget {
   const NowShowingMoviesShimmer({Key? key}) : super(key: key);

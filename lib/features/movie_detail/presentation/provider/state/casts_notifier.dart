@@ -5,7 +5,8 @@ import 'package:movies_riverpod/di/Injector.dart';
 import 'package:movies_riverpod/features/movie_detail/presentation/provider/state/casts_state.dart';
 import 'package:movies_riverpod/models/cast/cast.dart';
 import 'package:movies_riverpod/models/response/casts_response.dart';
-import 'package:movies_riverpod/shared/util/app_exception.dart';
+
+import '../../../../../core/util/app_exception.dart';
 
 interface class CastsNotifier extends StateNotifier<CastsState> {
 

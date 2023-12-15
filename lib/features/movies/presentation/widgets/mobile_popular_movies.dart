@@ -4,9 +4,9 @@ import 'package:movies_riverpod/features/movies/presentation/providers/movies_st
 
 import 'package:movies_riverpod/features/movies/presentation/widgets/popular_card.dart';
 import 'package:movies_riverpod/features/movies/presentation/widgets/shimmer/movies_vertical_shimmer.dart';
-import 'package:movies_riverpod/routes/app_router.dart';
 import 'package:go_router/go_router.dart';
-import 'package:movies_riverpod/shared/responsive/responsive.dart';
+
+import '../../../../core/routes/app_router.dart';
 
 class MobilePopularMovies extends ConsumerWidget {
   const MobilePopularMovies({super.key});

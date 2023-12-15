@@ -5,7 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movies_riverpod/di/Injector.dart';
 import 'package:movies_riverpod/features/movies/presentation/providers/state/movie_state.dart';
 import 'package:movies_riverpod/models/movies/movies.dart';
-import 'package:movies_riverpod/shared/util/app_exception.dart';
+
+import '../../../../../core/util/app_exception.dart';
 
 interface class MovieNotifier extends StateNotifier<MovieState> {
   final FetchAndCacheMoviesUseCase _fetchAndCacheMoviesUseCase =

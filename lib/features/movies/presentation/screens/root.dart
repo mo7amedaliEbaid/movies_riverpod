@@ -5,9 +5,11 @@ import 'package:movies_riverpod/features/bookmarks/presentation/screens/bookmark
 import 'package:movies_riverpod/features/movies/presentation/screens/home_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/trending_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/upcoming_screen.dart';
-import 'package:movies_riverpod/shared/widgets/app_bar.dart';
-import 'package:movies_riverpod/shared/widgets/app_bottom_navigation.dart';
-import 'package:movies_riverpod/shared/widgets/app_drawer.dart';
+
+import '../../../../core/widgets/app_bar.dart';
+import '../../../../core/widgets/app_bottom_navigation.dart';
+import '../../../../core/widgets/app_drawer.dart';
+
 class Root extends StatefulWidget {
   const Root({Key? key}) : super(key: key);
 
