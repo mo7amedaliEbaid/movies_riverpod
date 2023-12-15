@@ -69,13 +69,6 @@ Key development dependencies include:
 - **isar_generator:** Code generation for Isar database.
 - **auto_route_generator:** Code generation for routing with auto_route.
 
-## Demo Video
-
-
-<a href="https://youtu.be/Nr54-TYBIZU"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="110"></img></a>
-
-
-
 
 ### Download Apk
 <a href="https://github.com/mo7amedaliEbaid/movies_riverpod/releases/download/v1.0.1/movies-v2.apk"><img src="https://playerzon.com/asset/download.png" width="130"></img></a>
