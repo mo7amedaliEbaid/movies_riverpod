@@ -3,8 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies_riverpod/core/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/core/responsive/responsive.dart';
 
-import 'package:movies_riverpod/features/notifications/presentation/screen/notification_screen.dart';
+import 'package:movies_riverpod/features/notifications/presentation/screen/mobile_notification_screen.dart';
 
+import '../../features/notifications/presentation/screen/desktop_notification_screen.dart';
 import '../app/app_colors.dart';
 import '../app/app_strings.dart';
 

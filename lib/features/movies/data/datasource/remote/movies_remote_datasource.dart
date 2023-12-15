@@ -37,6 +37,30 @@ interface class MoviesRemoteDataSourceImpl extends MoviesRemoteDataSource {
   }
 
   @override
+  Future<Either<AppException, MoviesResponse>> getSearchedMovies(
+      {required String query, required int page}) async {
+    final response = await networkService.get(EndPoints.searchMovie(query), queryParams: {
+      Parameters.page: page,
+    });
+
+    return response.fold((l) => Left(l), (r) {
+      final jsonData = r.data;
+      if (jsonData == null) {
+        return Left(
+          AppException(
+              identifier: EndPoints.searchMovie(query),
+              statusCode: 0,
+              message: 'The data is not in the valid format',
+              which: 'http'),
+        );
+      }
+      final moviesResponse =
+      MoviesResponse.fromJson(jsonData, jsonData['results'] ?? []);
+      return Right(moviesResponse);
+    });
+  }
+
+  @override
   Future<Either<AppException, GenreResponse>> getGenre() async {
     final response = await networkService.get(EndPoints.genre);
     return response.fold((l) => Left(l), (r) {

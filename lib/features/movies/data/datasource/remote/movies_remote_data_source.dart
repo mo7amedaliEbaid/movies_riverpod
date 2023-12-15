@@ -8,5 +8,8 @@ abstract class MoviesRemoteDataSource {
   Future<Either<AppException, MoviesResponse>> getMovies(
       {required String endPoint, required int page});
 
+  Future<Either<AppException, MoviesResponse>> getSearchedMovies(
+      {required String query, required int page});
+
   Future<Either<AppException, GenreResponse>> getGenre();
 }

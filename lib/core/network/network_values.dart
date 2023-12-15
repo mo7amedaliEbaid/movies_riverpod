@@ -5,7 +5,10 @@ sealed class EndPoints {
   static const String trending = "trending/movie/week";
   static const String genre = 'genre/movie/list';
 
+
   static String movie(id) => 'movie/$id';
+
+  static String searchMovie(query) => 'search/movie&query=$query';
 
   static String casts(int id) => '/movie/$id/credits';
 }
