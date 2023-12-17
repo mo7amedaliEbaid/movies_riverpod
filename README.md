@@ -1,3 +1,6 @@
+https://github.com/mo7amedaliEbaid/movies_riverpod/assets/131966482/e6e4c60f-1ba1-43fd-8b2c-31aea4451299
+
+
 # movies_riverpod
 
  movies_riverpod is a versatile Flutter app designed for seamless movie exploration across different platforms. The app follows a Clean Architecture pattern, ensuring a modular and maintainable codebase. It has been successfully tested on mobile platforms (Android, iOS) and desktop (Linux).
@@ -15,7 +18,6 @@
 📄 **main.dart:** The entry point of the application, where the execution begins. It imports and initializes necessary components to kickstart the Flutter app.
 
 
-https://github.com/mo7amedaliEbaid/movies_riverpod/assets/131966482/e6e4c60f-1ba1-43fd-8b2c-31aea4451299
 
 
 ## Features
