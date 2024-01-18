@@ -1,3 +1,4 @@
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -15,13 +16,21 @@ class CastsList extends ConsumerWidget {
     final castsNotifier = ref.watch(castsStateNotifier(id));
     return castsNotifier.state == CastConcreteState.loading
         ? const Center(child: CircularProgressIndicator())
-        : ListView.builder(
-            itemCount: castsNotifier.casts.length,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return CastItem(
-                cast: castsNotifier.casts[index],
-              );
-            });
+        : ScrollConfiguration(
+            behavior: ScrollConfiguration.of(context).copyWith(
+              dragDevices: {
+                PointerDeviceKind.touch,
+                PointerDeviceKind.mouse,
+              },
+            ),
+            child: ListView.builder(
+                itemCount: castsNotifier.casts.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return CastItem(
+                    cast: castsNotifier.casts[index],
+                  );
+                }),
+          );
   }
 }

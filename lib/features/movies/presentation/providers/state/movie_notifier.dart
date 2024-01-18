@@ -43,6 +43,7 @@ interface class MovieNotifier extends StateNotifier<MovieState> {
     }
   }
 
+
   void updateStateFromGetMoviesResponse(Either<AppException, Movies> response) {
     response.fold((failure) {
       state = state.copyWith(

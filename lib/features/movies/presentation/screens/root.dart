@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:movies_riverpod/features/bookmarks/presentation/screens/bookmark_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/home_screen.dart';
+import 'package:movies_riverpod/features/movies/presentation/screens/search_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/trending_screen.dart';
 import 'package:movies_riverpod/features/movies/presentation/screens/upcoming_screen.dart';
 

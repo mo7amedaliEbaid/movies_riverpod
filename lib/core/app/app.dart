@@ -17,8 +17,8 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final goRouter = ref.watch(goRouterProvider);
     final themeMode = ref.watch(appThemeProvider);
-  //  log(MediaQuery.sizeOf(context).height.toString());
-   // log(MediaQuery.sizeOf(context).width.toString());
+    //  log(MediaQuery.sizeOf(context).height.toString());
+    // log(MediaQuery.sizeOf(context).width.toString());
     return ScreenUtilInit(
         minTextAdapt: true,
         splitScreenMode: true,

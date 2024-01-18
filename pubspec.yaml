@@ -52,6 +52,10 @@ dependencies:
   isar:
   get_it:
   isar_flutter_libs:
+#  path_provider:
+ # sqlite3_flutter_libs:
+#  sqflite_common_ffi_web:
+ # sqflite:
 #  window_manager:
 #  google_maps_flutter:
 #  google_maps_webservice:

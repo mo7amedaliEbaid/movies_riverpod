@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,7 +13,6 @@ import '../../../../core/widgets/rating_bar.dart';
 import '../../../../models/movie/movie.dart';
 import '../providers/state/genre_state.dart';
 
-
 class PopularMovie extends ConsumerWidget {
   final Movie movie;
 
@@ -22,7 +23,10 @@ class PopularMovie extends ConsumerWidget {
     final genreState = ref.watch(genreStateNotifier);
     return Container(
       width: 450,
-      padding: EdgeInsets.only(top: AppDimensions.p8, left: AppDimensions.p18, right: AppDimensions.p18),
+      padding: EdgeInsets.only(
+          top: AppDimensions.p8,
+          left: AppDimensions.p18,
+          right: AppDimensions.p18),
       child: Row(
         children: [
           Card(
@@ -46,7 +50,8 @@ class PopularMovie extends ConsumerWidget {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(left: AppDimensions.p12, top: AppDimensions.p10),
+              padding: EdgeInsets.only(
+                  left: AppDimensions.p12, top: AppDimensions.p10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,19 +66,32 @@ class PopularMovie extends ConsumerWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: AppDimensions.p8,),
+                  SizedBox(
+                    height: AppDimensions.p8,
+                  ),
                   RatingBar(rating: movie.voteAverage),
-                  SizedBox(height: AppDimensions.p8,),
-                  if (genreState.state == GenreConcreteState.loaded) SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: movie.genreIds.map((label) {
-                        final genre = genreState.genres
-                            .firstWhere((element) => element.id == label);
-                        return GenreChip(label: genre.name);
-                      }).toList(),
-                    ),
-                  )
+                  SizedBox(
+                    height: AppDimensions.p8,
+                  ),
+                  if (genreState.state == GenreConcreteState.loaded)
+                    ScrollConfiguration(
+                      behavior: ScrollConfiguration.of(context).copyWith(
+                        dragDevices: {
+                          PointerDeviceKind.touch,
+                          PointerDeviceKind.mouse,
+                        },
+                      ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: movie.genreIds.map((label) {
+                            final genre = genreState.genres
+                                .firstWhere((element) => element.id == label);
+                            return GenreChip(label: genre.name);
+                          }).toList(),
+                        ),
+                      ),
+                    )
                 ],
               ),
             ),

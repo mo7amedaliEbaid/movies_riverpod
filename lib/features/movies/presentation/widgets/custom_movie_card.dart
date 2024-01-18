@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -82,14 +84,22 @@ class CustomMovieCard extends ConsumerWidget {
                     height: AppDimensions.p8,
                   ),
                   if (genreState.state == GenreConcreteState.loaded)
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: movie.genreIds.map((label) {
-                          final genre = genreState.genres
-                              .firstWhere((element) => element.id == label);
-                          return GenreChip(label: genre.name);
-                        }).toList(),
+                    ScrollConfiguration(
+                      behavior: ScrollConfiguration.of(context).copyWith(
+                        dragDevices: {
+                          PointerDeviceKind.touch,
+                          PointerDeviceKind.mouse,
+                        },
+                      ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: movie.genreIds.map((label) {
+                            final genre = genreState.genres
+                                .firstWhere((element) => element.id == label);
+                            return GenreChip(label: genre.name);
+                          }).toList(),
+                        ),
                       ),
                     ),
                   Text(
