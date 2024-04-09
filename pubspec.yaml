@@ -52,6 +52,7 @@ dependencies:
   isar:
   get_it:
   isar_flutter_libs:
+  anim_search_bar:
 #  path_provider:
  # sqlite3_flutter_libs:
 #  sqflite_common_ffi_web:

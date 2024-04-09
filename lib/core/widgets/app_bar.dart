@@ -1,5 +1,7 @@
+import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movies_riverpod/core/app/app_dimensions.dart';
 import 'package:movies_riverpod/core/extensions/build_context_extensions.dart';
 import 'package:movies_riverpod/core/responsive/responsive.dart';
 
@@ -9,9 +11,20 @@ import '../../features/notifications/presentation/screen/desktop_notification_sc
 import '../app/app_colors.dart';
 import '../app/app_strings.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   const CustomAppBar({Key? key}) : super(key: key);
 
+  @override
+  State<CustomAppBar> createState() => _CustomAppBarState();
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => Size(0, AppDimensions.p64);
+}
+
+class _CustomAppBarState extends State<CustomAppBar> {
+
+  TextEditingController textEditingController=TextEditingController();
   @override
   Widget build(BuildContext context) {
     final Color iconColor = context.theme.brightness == Brightness.light
@@ -36,6 +49,28 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       actions: [
+      /*  Padding(
+          padding: const EdgeInsets.only(top: 12.0),
+          child: AnimSearchBar(
+            width: 400,
+            textFieldColor: iconColor,
+            textController: textEditingController,
+            color: iconColor,
+
+            onSuffixTap: () {
+              setState(() {
+                textEditingController.clear();
+              });
+            }, onSubmitted: (String ) {  },
+          ),
+        ),*/
+    /*    IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.search,
+            color: iconColor,
+          ),
+        ),*/
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: IconButton(
@@ -50,7 +85,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Icons.notification_add,
                 color: iconColor,
               )),
-        )
+        ),
       ],
     );
   }
